@@ -65,173 +65,88 @@
 	</div>
 
 
-
-
-
 	<div id="dropDownSelect1"></div>
 
-
-
 	<!--===============================================================================================-->
-
 	<script src="dist/vendor/jquery/jquery-3.2.1.min.js"></script>
 
-
-
 	<!--===============================================================================================-->
-
 	<script src="dist/vendor/bootstrap/js/popper.js"></script>
-
 	<script src="dist/vendor/bootstrap/js/bootstrap.min.js"></script>
-
 	<!--===============================================================================================-->
-
 	<script src='http://192.168.0.200/plugins/sweetalert2/dist/sweetalert2.min.js'></script>
-
 	<script src="dist/js/main.js"></script>
-
 	<script>
-
 		$(document).ready(function() {
-
 			$('#formlogin').submit(function(e) {
-
 				var homeurl;
-
 				homeurl = 'http://192.168.0.200';
-
 				e.preventDefault();
-
 				$.ajax({
-
 					type: 'POST',
-
 					url: $(this).attr('action'),
-
 					data: $(this).serialize(),
-
 					success: function(data) {
 
-
-
 						if (data == "ok") {
-
 							console.log('sukses');
-
 							window.location = homeurl;
-
 						}
-
 						if (data == "nopass") {
-
 							swal({
-
 								position: 'top-end',
-
 								type: 'warning',
-
 								title: 'Password Salah',
-
 								showConfirmButton: false,
-
 								timer: 1500
-
 							});
-
 						}
-
 						if (data == "td") {
-
 							swal({
-
 								position: 'top-end',
-
 								type: 'warning',
-
-								title: 'Siswa tidak terdaftar',
-
+								title: 'Akun tidak terdaftar',
 								showConfirmButton: false,
-
 								timer: 1500
-
 							});
-
 						}
-
 						if (data == "nologin") {
-
 							swal({
-
 								position: 'top-end',
-
 								type: 'warning',
-
-								title: 'Siswa sudah aktif',
-
+								title: 'Sudah ada',
 								showConfirmButton: false,
-
 								timer: 1500
-
 							});
-
 						}
-
 						if (data == "ta") {
-
 							swal({
-
 								position: 'top-end',
-
 								type: 'warning',
-
-								title: 'Akun belum diaktifkan silahkan hubungi panitia ujian',
-
+								title: 'Akun belum diaktifkan silahkan buat akun',
 								showConfirmButton: false,
-
 								timer: 1500
-
 							});
-
 						}
-
 
 
 					}
-
 				})
-
 				return false;
-
 			});
-
-
 
 		});
 
-
-
 		function showpass() {
-
 			var x = document.getElementById("pass");
-
 			if (x.type === "password") {
-
 				x.type = "text";
-
 			} else {
-
 				x.type = "password";
-
 			}
-
 		}
-
 	</script>
 
-
-
 </body>
-
-
 
 </html>
