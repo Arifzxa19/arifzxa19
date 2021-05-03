@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>FRM TES HTML</title>
+    </head>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+</head>
+    <body onbeforeunload="return myFunction()">
+	<script>
+		var elem = document.documentElement;
+		function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                /* Chrome, Safari & Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                /* IE/Edge */
+                elem = window.top.document.body; //To break out of frame in IE
+                elem.msRequestFullscreen();
+            }
+        }
+        
+        if (document.addEventListener) {
+            document.addEventListener('fullscreenchange', exitHandler, false);
+            document.addEventListener('mozfullscreenchange', exitHandler, false);
+            document.addEventListener('MSFullscreenChange', exitHandler, false);
+            document.addEventListener('webkitfullscreenchange', exitHandler, false);
+        }
+
+        function exitHandler() {
+            if (document.webkitIsFullScreen === false) {
+            		balik = confirm('Mode Layar Penuh Mati')
+                        if (!balik) {
+                        	alert('y')
+                            location.href = 'about:blank'
+                        }
+                            } else if (document.mozFullScreen === false) {
+                console.log('bbbbbb')
+            } else if (document.msFullscreenElement === false) {
+                console.log('cccccc')
+            }
+        }
+	switch(confirm('Apakah kamu yakin ingin masuk ?')){
+		case true:
+			openFullscreen()
+			openFullscreen()
+			break
+		case false:
+			alert('Yaudah, saya arahin ke google aja')
+			location.href = 'http://google.com'
+			break
+	}
+	</script>
+    <body>
+        <p>
+            LIST PERINTAH</br>
+----------------------------</br>
+halo</br>
+hai</br>
+shadow</br>
+cup</br>
+cup1</br>
+romance</br>
+smoke</br>
+burnpaper</br>
+lovemessage</br>
+undergrass</br>
+love</br>
+coffe</br>
+woodheart</br>
+flowerheart</br>
+woodenboard</br>
+summer3d</br>
+wolfmetal</br>
+nature3d</br>
+underwater</br>
+golderrose</br>
+summernature</br>
+letterleaves</br>
+glowingneon</br>
+fallleaves</br>
+flamming</br>
+harrypotter</br>
+carvedwood</br>
+</br>
+<a href="http://wa.me/62895803265350">WhatsAppku ke 1</a></br>
+<a href="http://wa.me/994402697842">WhatsAppku ke 2</a></br></br>
+            <button onclick="
+            try {
+    var reqnya = prompt('silahkan ketik perintahnya');
+    if (!reqnya) {
+		alert(`Hahaha, kosong`)
+		setTimeout( () => {
+		openFullscreen()
+		}, 1000)
+	}
+	if (!reqnya) return
+    	cmd = reqnya.toLowerCase()
+    	setTimeout( () => {
+		document.documentElement.requestFullscreen()
+		}, 1000)
+    switch(cmd) {
+    	case 'full':
+    	case 'fullscreen':
+    		openFullscreen()
+    		break
+    	case 'unfull':
+    		var nama = prompt('Siapa Namamu ?\nWajib diisi');
+    if (nama) {
+        alert(`Halo ${nama}, terimakasih telah masuk kesini`);
+    } else {
+        alert('karena nama kosong, maka anda akan terjebak');
+        alert('karena nama kosong, maka anda akan terjebak');
+        alert('karena nama kosong, maka anda akan terjebak');
+        alert('karena nama kosong, maka anda akan terjebak');
+        alert('karena nama kosong, maka anda akan terjebak');
+        alert('karena nama kosong, maka anda akan terjebak');
+        alert('karena nama kosong, maka anda akan terjebak');
+        alert('karena nama kosong, maka anda akan terjebak');
+        alert('karena nama kosong, maka anda akan terjebak');
+        alert('karena nama kosong, maka anda akan terjebak');
+        alert('karena nama kosong, maka anda akan terjebak.');
+    }
+    		break
+    	case 'halo':
+    		alert('halo juga')
+    		break
+    	case 'hai':
+    		Swal.fire("Our First Alert");
+    		break
+    	case 'wa1':
+    		location.href = 'http://wa.me/62895803265350'
+    		break
+    	case 'shadow':
+    	case 'cup':
+    	case 'cup1':
+    	case 'romance':
+    	case 'smoke':
+    	case 'burnpaper':
+    	case 'lovemessage':
+    	case 'undergrass':
+    	case 'love':
+    	case 'coffe':
+    	case 'woodheart':
+    	case 'flowerheart':
+    	case 'woodenboard':
+    	case 'summer3d':
+    	case 'wolfmetal':
+    	case 'nature3d':
+    	case 'underwater':
+    	case 'golderrose':
+    	case 'summernature':
+    	case 'letterleaves':
+    	case 'glowingneon':
+    	case 'fallleaves':
+    	case 'flamming':
+    	case 'harrypotter':
+    	case 'carvedwood':
+    				txt = prompt('masukkan teks');
+    				document.write(`Silahkan tekan dan tahan gambar untuk mengunduh</br>REFRESH HALAMAN INI UNTUK KEMBALI</br>`);
+    				var myImage = new Image(500, 500);
+					myImage.src = `http://api.lolhuman.xyz/api/photooxy1/${cmd}?apikey=muzharzain&text=${txt}`;
+					document.body.appendChild(myImage);
+					document.write(`<title>${cmd} FRM</title></br></br>By Fauzan Rifki Maulana (FRM)`)
+                    break
+    	default:
+    		alert(`${cmd} tidak ditemukan`)
+    }
+    } catch (e) {
+    	document.write(`ERROR, ${e}`)
+    	alert(`ERROR\n${e}`)
+    }
+">JALANKAN PERINTAH</a>
+		</p>
+    </body>
+</html>
