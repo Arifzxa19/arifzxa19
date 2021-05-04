@@ -66,8 +66,37 @@
     </div>
   </div>
   <script>
+  	  var elem = document.documentElement;
+
+        /* Function to open fullscreen mode */
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                /* Chrome, Safari & Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                /* IE/Edge */
+                elem = window.top.document.body; //To break out of frame in IE
+                elem.msRequestFullscreen();
+            }
+        }
 		document.querySelector(".pergi").addEventListener("click", function() {
-    	swal("silahkan pergi", "jangan lupa kembali lagi", "success");
+    	swal({
+                        title: 'Oops',
+                        html: 'Kembali ke mode fullscreen',
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Iya',
+                        allowOutsideClick: false
+                    }).then((result) => {
+                        if (result.value) {
+                            openFullscreen();
+                        }
+                    })
     	})
 	</script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
