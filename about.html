@@ -49,7 +49,7 @@
             <a class="nav-link active" aria-current="page" href="https://fauzanrifkimaulana.blogspot.com">Blogspot</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page">full</a>
+            <a class="nav-link active" id="fullscreen" aria-current="page">full</a>
           </li>
         </ul>
       </div>
@@ -87,7 +87,7 @@
                 elem.msRequestFullscreen();
             }
         }
-		document.querySelector(".pergi").addEventListener("click", function() {
+		document.querySelector("#fullscreen").addEventListener("click", function() {
     	swal({
                         title: 'Oops',
                         html: 'Kembali ke mode fullscreen',
@@ -98,6 +98,21 @@
                     }).then((result) => {
                         if (result.value) {
                             openFullscreen();
+                        }
+                    })
+    	})
+    
+    	document.querySelector(".pergi").addEventListener("click", function() {
+    		swal({
+                        title: 'MAU PERGI ?',
+                        html: 'anda yakin ingin pergi',
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Iya',
+                        allowOutsideClick: false
+                    }).then((result) => {
+                        if (result.value) {
+                            location.href = 'about:blank'
                         }
                     })
     	})
