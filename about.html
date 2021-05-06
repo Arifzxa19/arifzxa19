@@ -51,6 +51,9 @@
           <li class="nav-item">
             <a class="nav-link active" id="fullscreen" aria-current="page">full</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" id="stalkgithub" aria-current="page">pp github</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -116,6 +119,41 @@
                         }
                     })
     	})
+    
+    	document.querySelector("#stalkgithub").addEventListener("click", function() {
+    		Swal.fire({
+  title: 'Submit your Github username',
+  input: 'text',
+  inputAttributes: {
+    autocapitalize: 'off'
+  },
+  showCancelButton: true,
+  confirmButtonText: 'Look up',
+  showLoaderOnConfirm: true,
+  preConfirm: (login) => {
+    return fetch(`//api.github.com/users/${login}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText)
+        }
+        return response.json()
+      })
+      .catch(error => {
+        Swal.showValidationMessage(
+          `Request failed: ${error}`
+        )
+      })
+  },
+  allowOutsideClick: () => !Swal.isLoading()
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: `${result.value.login}'s avatar`,
+      imageUrl: result.value.avatar_url
+    })
+  }
+})
+})
 	</script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
