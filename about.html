@@ -115,7 +115,7 @@
                         allowOutsideClick: false
                     }).then((result) => {
                         if (result.value) {
-                            location.href = 'about:blank'
+                            window.close()
                         }
                     })
     	})
@@ -147,7 +147,7 @@
   allowOutsideClick: () => !Swal.isLoading()
 }).then((result) => {
   if (result.isConfirmed) {
-    Swal.fire({
+    swal({
       title: `${result.value.login}'s avatar`,
       imageUrl: result.value.avatar_url
     })
