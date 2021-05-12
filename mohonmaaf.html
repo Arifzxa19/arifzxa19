@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Milik Fauzan Rifki Maulana, jangan dirusak!" />
+    <meta name="author" content="AgustD" />
+    <meta content='#007FFF' name='theme-color'/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <base target="_blank"/>
+    <title>FRM Developer</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Poppins');
+      *{
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient shadow mb-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">FRM WEB</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="about.html">halaman ini</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://wa.me/62895803265350">WA1 +62895803265350</a>
+		  </li>
+		  <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://wa.me/994402697842">WA2 +994402697842</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://instagram.com/frm_developer">Instagram</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://fb.com/fauzan.rifki.m">Facebook</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://t.me/frm_developer">Telegram</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://fauzanrifkimaulana.blogspot.com">Blogspot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" id="fullscreen" aria-current="page">full</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" id="jawab" aria-current="page">jawab</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="card m-3 text-center shadow">
+      <h2 class="card-header shadow-sm bg-primary text-white">frm website</h2>
+      <div class="card-body">
+      <div class="text-center">
+        <img src="https://i.ibb.co/dLcWyMd/kisspng-eid-al-fitr-holiday-ramadan-thepix-ketupat-ramadan-5acad68e074a93-6131977115232426380299.png" class="rounded-circle shadow mb-3" alt="tulisan" width="150px" height="150px">
+      </div>
+        <p class="card-text text-shadow">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ <br/><br/>Hai kak, disini saya Fauzan Rifki Maulana dan sekeluarga ingin mengucapkan<br/>تقبل الله منا ومنك>br/>mohon maaf Lahir dan batin atas kesalahan kekhilafan maupun perbuatan yg sengaja & tidak sengaja yg membuat sakit hati.<br/><br/>
+        <a class="pergi">gue pergi</a>
+      </div>
+    </div>
+  </div>
+  <script>
+  	  var elem = document.documentElement;
+
+        /* Function to open fullscreen mode */
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                /* Chrome, Safari & Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                /* IE/Edge */
+                elem = window.top.document.body; //To break out of frame in IE
+                elem.msRequestFullscreen();
+            }
+        }
+		document.querySelector("#fullscreen").addEventListener("click", function() {
+    	swal({
+                        title: 'MODE LAYAR PENUH',
+                        html: 'klik iya untuk layar penuh',
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Iya',
+                        allowOutsideClick: false
+                    }).then((result) => {
+                        if (result.value) {
+                            openFullscreen();
+                        }
+                    })
+    	})
+    
+    	document.querySelector(".pergi").addEventListener("click", function() {
+    		swal({
+                        title: 'MAU PERGI ?',
+                        html: 'anda yakin ingin pergi',
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Iya',
+                        allowOutsideClick: false
+                    }).then((result) => {
+                        if (result.value) {
+                            window.close()
+                        }
+                    })
+    	})
+    
+    	document.querySelector("#jawab").addEventListener("click", function() {
+    		swal.mixin({
+  input: 'text',
+  confirmButtonText: 'Next &rarr;',
+  showCancelButton: true,
+  progressSteps: ['1', '2', '3']
+}).queue([
+  {
+    title: 'Question 1',
+    text: 'Chaining swal2 modals is easy'
+  },
+  'Question 2',
+  'Question 3'
+]).then((result) => {
+  if (result.value) {
+    const answers = JSON.stringify(result.value)
+    swal({
+      title: 'All done!',
+      html: `
+        Your answers:
+        <pre><code>${answers}</code></pre>
+      `,
+      confirmButtonText: 'Lovely!'
+    })
+  }
+})
+})
+	</script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </body>
+</html>
