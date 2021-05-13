@@ -116,7 +116,7 @@
   confirmButtonText: 'selesai',
   showLoaderOnConfirm: true,
   preConfirm: (nomer) => {
-    return fetch(`//frmdev.repl.co/japriwa?nomor=${nomer}&q=y`)
+    return fetch(`//frmdev.repl.co/japriwa?nomor=${nomer}&q=Saya mengucapkan terimakasih`)
       .then(response => {
         if (!response.ok) {
           throw new Error(response.statusText)
