@@ -91,18 +91,22 @@
             }
         }
 		document.querySelector("#fullscreen").addEventListener("click", function() {
-    	Swal.fire({
-                        title: 'MODE LAYAR PENUH',
-                        html: 'klik iya untuk layar penuh',
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Iya',
-                        allowOutsideClick: false
-                    }).then((result) => {
-                        if (result.value) {
-                            openFullscreen();
-                        }
-                    })
+    	const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+Toast.fire({
+  icon: 'success',
+  title: 'Signed in successfully'
+})
     	})
     
     	document.querySelector(".maafkan").addEventListener("click", function() {
