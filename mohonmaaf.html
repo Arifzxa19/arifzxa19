@@ -132,13 +132,11 @@
   allowOutsideClick: () => !Swal.isLoading()
 }).then((result) => {
   if (result.isConfirmed) {
-    Swal.fire({
-  position: 'top-end',
-  icon: 'success',
-  title: result.value.result,
-  showConfirmButton: false,
-  timer: 5000
-})
+    Swal.fire(
+  'informasi',
+  result.value.result,
+  'success'
+)
   }
 })
     	})
