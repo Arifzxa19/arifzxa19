@@ -133,9 +133,12 @@
 }).then((result) => {
   if (result.isConfirmed) {
     Swal.fire({
-      title: `${result.value.login}'s avatar`,
-      imageUrl: result.value.avatar_url
-    })
+  position: 'top-end',
+  icon: 'success',
+  title: 'Silahkan buka whatsapp anda',
+  showConfirmButton: false,
+  timer: 1500
+})
   }
 })
     	})
