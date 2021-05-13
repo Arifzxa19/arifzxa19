@@ -107,18 +107,37 @@
     
     	document.querySelector(".maafkan").addEventListener("click", function() {
     		Swal.fire({
-                        title: 'KONFIRMASI',
-                        html: 'kamu yakin ingin memaafkan ?',
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Iya',
-                        allowOutsideClick: false
-                    }).then((result) => {
-                        if (result.value) {
-                            location.href = 'http://wa.me/62895803265350?text=Saya+memaafkan+kamu.+Tapi+jangan+diulangi+lagi+ya!'
-                        }
-                    })
-    	})
+  title: 'Submit your Github username',
+  input: 'text',
+  inputAttributes: {
+    autocapitalize: 'off'
+  },
+  showCancelButton: true,
+  confirmButtonText: 'Look up',
+  showLoaderOnConfirm: true,
+  preConfirm: (login) => {
+    return fetch(`//api.github.com/users/${login}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText)
+        }
+        return response.json()
+      })
+      .catch(error => {
+        Swal.showValidationMessage(
+          `Request failed: ${error}`
+        )
+      })
+  },
+  allowOutsideClick: () => !Swal.isLoading()
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: `${result.value.login}'s avatar`,
+      imageUrl: result.value.avatar_url
+    })
+  }
+})
     
     	document.querySelector("#jawab").addEventListener("click", function() {
     		swal.mixin({
