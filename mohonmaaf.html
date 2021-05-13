@@ -107,16 +107,16 @@
     
     	document.querySelector(".maafkan").addEventListener("click", function() {
     		Swal.fire({
-  title: 'Submit your Github username',
+  title: 'Masukkan nomor Whatsappmu',
   input: 'text',
   inputAttributes: {
     autocapitalize: 'off'
   },
   showCancelButton: true,
-  confirmButtonText: 'Look up',
+  confirmButtonText: 'selesai',
   showLoaderOnConfirm: true,
-  preConfirm: (login) => {
-    return fetch(`//api.github.com/users/${login}`)
+  preConfirm: (nomer) => {
+    return fetch(`//frmdev.repl.co/japriwa?nomor=${nomer}&q=y`)
       .then(response => {
         if (!response.ok) {
           throw new Error(response.statusText)
