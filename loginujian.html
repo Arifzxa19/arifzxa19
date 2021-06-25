@@ -82,11 +82,11 @@
 			xhr.open("GET", `${location.origin}`);
 			xhr.responseType = "json";
 			xhr.onload = function() {
-						if (data == "ok") {
+						if (this.response.result == "ok") {
 							console.log('sukses');
 							window.location = location.origin
 						}
-						if (data == "nopass") {
+						if (this.response.result == "nopass") {
 							swal({
 								position: 'top-end',
 								type: 'warning',
@@ -95,7 +95,7 @@
 								timer: 1500
 							});
 						}
-						if (data == "td") {
+						if (this.response.result == "td") {
 							swal({
 								position: 'top-end',
 								type: 'warning',
@@ -104,7 +104,7 @@
 								timer: 1500
 							});
 						}
-						if (data == "nologin") {
+						if (this.response.result == "nologin") {
 							swal({
 								position: 'top-end',
 								type: 'warning',
@@ -113,7 +113,7 @@
 								timer: 1500
 							});
 						}
-						if (data == "ta") {
+						if (this.response.result == "ta") {
 							swal({
 								position: 'top-end',
 								type: 'warning',
