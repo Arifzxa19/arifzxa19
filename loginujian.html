@@ -51,7 +51,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" id="tombollogin">
+							<button class="login100-form-btn">
 								Login
 							</button>
 						</div>
@@ -77,7 +77,7 @@
 	<script src='plugins/sweetalert2/dist/sweetalert2.min.js'></script>
 	<script src="dist/js/main.js"></script>
 	<script>
-		document.querySelector("#tombollogin").addEventListener("click", function() {
+		document.querySelector("#formlogin").addEventListener("click", function() {
 			var xhr = new XMLHttpRequest();
 			xhr.open("GET", `${location.origin}`);
 			xhr.responseType = "json";
