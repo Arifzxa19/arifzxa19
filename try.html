@@ -460,6 +460,7 @@ function getParameterByName(name, url = window.location.href) {
 
 window.setTimeout("getjson(getParameterByName('url'))", 1000);
 function getjson(link) {
+  document.getElementById('hasiljson').innerText = 'sedang memuat '+link
   var xhr = new XMLHttpRequest();
   xhr.open("GET", link);
   xhr.responseType = "json";
