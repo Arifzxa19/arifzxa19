@@ -458,19 +458,19 @@ function getParameterByName(name, url = window.location.href) {
         document.getElementById("jam").textContent = strings
     }
 
-window.setTimeout("getjson(getParameterByName('url'))",1000);
-function getjson(link) {
-	var xhr = new XMLHttpRequest();
-	xhr.open("GET", link);
-	xhr.responseType = "json";
-	xhr.onload = function() {
-		try {
+window.setTimeout("getvisit('https://frmdev.herokuapp.com/heleh')", 1000);
+function getvisit(link) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", link);
+  xhr.responseType = "json";
+  xhr.onload = function() {
+    try {
 	document.getElementById('hasiljson').innerText = this.response.result
 		} catch (e) {
 			document.getElementById("hasiljson").textContent=e
 		}
-	}
-	xhr.send();
+  }
+  xhr.send();
 }
     
 	document.querySelector("#inspectel").addEventListener("click", function() {
