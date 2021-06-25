@@ -461,7 +461,7 @@ function getParameterByName(name, url = window.location.href) {
 window.setTimeout("getjson(getParameterByName('url'))",1000);
 function getjson(url) {
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", url);
+	xhr.open("GET", "http://frmdev.herokuapp.com/heleh");
 	xhr.responseType = "json";
 	xhr.onload = function() {
 		try {
