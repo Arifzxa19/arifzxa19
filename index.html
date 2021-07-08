@@ -21,7 +21,6 @@
 <body id="page-top">
 <script>
 if (typeof(Storage) !== "undefined") {
-  sessionStorage.setItem("namaanda", ``);
   Swal.fire('',`Halo ${sessionStorage.getItem("namaanda")}`)
 } else {
   Swal.fire('',`Halo, selamat datang`)
@@ -251,13 +250,13 @@ if (typeof(Storage) !== "undefined") {
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">NAMA ANDA</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="namamu">mencari...</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="namamu"><script>document.write(sessionStorage.getItem("namaanda"))</script></div>
                       <div class="mt-2 mb-0 text-muted text-xs">
                         <span>klik gambar pensil untuk mengubah</span>
                       </div>
                     </div>
                     <div class="col-auto">
-                      <i class="fa-pencil fa-2x text-success"></i>
+                      <i class="fas fa-pencil-alt fa-2x text-success" onclick="Swal.fire('','y')"></i>
                     </div>
                   </div>
                 </div>
@@ -486,7 +485,23 @@ if (typeof(Storage) !== "undefined") {
   return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
 }
 
-  
+function input1(title) {
+if (!title) {title = 'Silahkan masukan teks'}
+swal.mixin({
+  input: 'text',
+  confirmButtonText: 'Next &rarr;',
+  showCancelButton: true,
+  progressSteps: ['1']
+}).queue([
+  {
+    text: title
+  }
+]).then((result) => {
+  if (result.value) {
+    sessionStorage.setItem("namaanda", result.value)
+  }
+})
+}  
 
   window.setTimeout("waktu()", 1000);
     function waktu() {
