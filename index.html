@@ -472,7 +472,7 @@ if (typeof(Storage) !== "undefined") {
      script.onload = function () {
          eruda.init()
      }}
-if (location.href.includes('inspect')) {inspect()}
+if (location.href.includes('inspect=')) {inspect()}
 
   function kyun(seconds){
   function pad(s){
@@ -499,7 +499,7 @@ swal.mixin({
 ]).then((result) => {
   if (result.value) {
     document.cookie = 'nama='+result.value[0]
-    document.getElementById('namamu').innerText = document.cookie.split('nama=')[1].split(';')[0]
+    document.getElementById('namamu').innerText = getCookie('nama')
     console.log(result.value[0])
   }
 })
