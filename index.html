@@ -19,7 +19,14 @@
 </head>
 
 <body id="page-top">
-<script>Swal.fire('',`Halo usernameid`)</script>
+<script>
+if (typeof(Storage) !== "undefined") {
+  sessionStorage.setItem("namaanda", "frm");
+  Swal.fire('',`Halo ${sessionStorage.getItem("namaanda")}`)
+} else {
+  Swal.fire('',`Halo, selamat datang`)
+}
+</script>
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -482,7 +489,6 @@ function getip(){
 	xhr.onload = function() {
 	ipanda = this.response.ip
 	console.log(this.response.ip)
-	addip()
 	};
 	xhr.send();
 }
@@ -498,11 +504,6 @@ function getvisit(){
 	}
 	xhr.send();
 }
-    
-    document.querySelector("#inspectel").addEventListener("click", function() {
-    	Swal.fire('Harap bersabar ....','biasanya memakan waktu lama')
-    	inspect()
-    })
     
     document.querySelector("#sebarwa").addEventListener("click", function() {
     	location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
@@ -558,6 +559,7 @@ function getOS() {
   return os;
 }
 document.getElementById('platformanda').innerText = getOS()
+
   </script>
 
   <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery/jquery.min.js"></script>
