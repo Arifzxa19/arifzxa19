@@ -497,7 +497,7 @@ swal.mixin({
   }
 ]).then((result) => {
   if (result.value) {
-    document.cookie(result.value[0])
+    document.cookie = result.value[0]
     document.getElementById('namamu').innerText = document.cookie
     console.log(result.value[0])
   }
