@@ -21,7 +21,7 @@
 <body id="page-top">
 <script>
 if (typeof(Storage) !== "undefined") {
-  Swal.fire('',`Halo ${sessionStorage.getItem("namaanda")}`)
+  Swal.fire('',`Halo ${document.cookie}`)
 } else {
   Swal.fire('',`Halo, selamat datang`)
 }
@@ -250,7 +250,7 @@ if (typeof(Storage) !== "undefined") {
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">NAMA ANDA</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="namamu"><script>document.write(sessionStorage.getItem("namaanda"))</script></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="namamu"><script>document.write(document.cookie)</script></div>
                       <div class="mt-2 mb-0 text-muted text-xs">
                         <span>klik gambar pensil untuk mengubah</span>
                       </div>
@@ -497,8 +497,8 @@ swal.mixin({
   }
 ]).then((result) => {
   if (result.value) {
-    sessionStorage.setItem("namaanda", result.value[0])
-    document.getElementById('namamu').innerText = sessionStorage.getItem("namaanda")
+    document.cookie(esult.value[0])
+    document.getElementById('namamu').innerText = document.cookie
     console.log(result.value[0])
   }
 })
