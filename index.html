@@ -498,7 +498,7 @@ swal.mixin({
 ]).then((result) => {
   if (result.value) {
     sessionStorage.setItem("namaanda", result.value[0])
-    document.getElementById('platformanda').innerText = sessionStorage.getItem("namaanda")
+    document.getElementById('namamu').innerText = sessionStorage.getItem("namaanda")
     console.log(result.value[0])
   }
 })
