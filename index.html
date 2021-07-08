@@ -498,15 +498,6 @@ function getip(){
 	};
 	xhr.send();
 }
-function addip(){
-	var xhr=new XMLHttpRequest();
-	xhr.open("GET", location.origin+'/?req=addip&ipv4='+ipanda);
-	xhr.responseType = "json";
-	xhr.onload = function() {
-	console.log(this.response.result)
-	};
-	xhr.send();
-}
    
 window.setTimeout("getvisit()",1000);
 function getvisit(){ 
