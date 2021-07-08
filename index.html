@@ -256,7 +256,7 @@ if (typeof(Storage) !== "undefined") {
                       </div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-pencil-alt fa-2x text-success" onclick="Swal.fire('','y')"></i>
+                      <i class="fas fa-pencil-alt fa-2x text-success" onclick="inputnama()"></i>
                     </div>
                   </div>
                 </div>
@@ -485,8 +485,7 @@ if (typeof(Storage) !== "undefined") {
   return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
 }
 
-function input1(title) {
-if (!title) {title = 'Silahkan masukan teks'}
+function inputnama() {
 swal.mixin({
   input: 'text',
   confirmButtonText: 'Next &rarr;',
@@ -494,11 +493,12 @@ swal.mixin({
   progressSteps: ['1']
 }).queue([
   {
-    text: title
+    text: 'Silahkan masukkan nama anda'
   }
 ]).then((result) => {
   if (result.value) {
     sessionStorage.setItem("namaanda", result.value)
+    console.log(result.value)
   }
 })
 }  
