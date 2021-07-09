@@ -61,7 +61,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #6a7dfe;
+  color: #66bb6a;
   color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
   color: -o-linear-gradient(left, #21d4fd, #b721ff);
   color: -moz-linear-gradient(left, #21d4fd, #b721ff);
@@ -263,7 +263,7 @@ body{
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 
-  background: #6a7dfe;
+  background: #66bb6a;
   background: -webkit-linear-gradient(left, #21d4fd, #b721ff);
   background: -o-linear-gradient(left, #21d4fd, #b721ff);
   background: -moz-linear-gradient(left, #21d4fd, #b721ff);
@@ -330,7 +330,7 @@ body{
 }
 
 .btn-show-pass:hover {
-  color: #6a7dfe;
+  color: #66bb6a;
   color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
   color: -o-linear-gradient(left, #21d4fd, #b721ff);
   color: -moz-linear-gradient(left, #21d4fd, #b721ff);
@@ -338,7 +338,7 @@ body{
 }
 
 .btn-show-pass.active {
-  color: #6a7dfe;
+  color: #66bb6a;
   color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
   color: -o-linear-gradient(left, #21d4fd, #b721ff);
   color: -moz-linear-gradient(left, #21d4fd, #b721ff);
