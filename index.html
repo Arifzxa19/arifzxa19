@@ -16,6 +16,7 @@
   <link href="https://frmdeveloper.github.io/RuangAdmin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="https://frmdeveloper.github.io/RuangAdmin/css/ruang-admin.min.css" rel="stylesheet">
   <script src="https://frm.frmdev.rf.gd/plugins/swal.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alfg/ping.js@0.2.2/dist/ping.min.js" type="text/javascript"></script>
 </head>
 
 <body id="page-top">
@@ -465,6 +466,7 @@ if (typeof(Storage) !== "undefined") {
   
   
   <script>
+
   function inspect() {
      var script =  document.createElement('script')
      script.src="//cdn.jsdelivr.net/npm/eruda"
@@ -597,8 +599,16 @@ function getOS() {
 }
 document.getElementById('platformanda').innerText = getOS()
 
-  </script>
+var p = new Ping();
+p.ping("https://www.google.com", function(err, data) {
+  if (err) {
+    console.log("error loading resource")
+    data = data + " " + err;
+  }
+  console.log(data+' ms')
+});
 
+  </script>
   <script src="https://frm.frmdev.rf.gd/cookie.js"></script>
   <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery/jquery.min.js"></script>
   <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
