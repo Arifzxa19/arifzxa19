@@ -17,6 +17,7 @@
   <link href="https://frmdeveloper.github.io/RuangAdmin/css/ruang-admin.min.css" rel="stylesheet">
   <script src="https://frm.frmdev.rf.gd/plugins/swal.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/alfg/ping.js@0.2.2/dist/ping.min.js" type="text/javascript"></script>
+  <script src="https://frm.frmdev.rf.gd/cookie.js"></script>
 </head>
 
 <body id="page-top">
@@ -241,7 +242,7 @@ if (typeof(Storage) !== "undefined") {
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">NAMA ANDA</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="namamu"><script>document.write(document.cookie.split('nama=')[1].split(';')[0])</script></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="namamu"><script>document.write(getCookie('nama'))</script></div>
                       <div class="mt-2 mb-0 text-muted text-xs">
                         <span>klik gambar pensil untuk mengubah</span>
                       </div>
@@ -599,7 +600,6 @@ p.ping("https://www.google.com", function(err, data) {
 });
 
   </script>
-  <script src="https://frm.frmdev.rf.gd/cookie.js"></script>
   <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery/jquery.min.js"></script>
   <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery-easing/jquery.easing.min.js"></script>
