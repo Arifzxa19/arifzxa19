@@ -490,7 +490,7 @@ swal.mixin({
   }
 ]).then((result) => {
   if (result.value) {
-    document.cookie = 'nama='+result.value[0]
+    setCookie('nama',result.value[0],365)
     document.getElementById('namamu').innerText = getCookie('nama')
     console.log(result.value[0])
   }
