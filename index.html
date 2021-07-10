@@ -23,7 +23,7 @@
 <body id="page-top">
 <script>
 if (typeof(Storage) !== "undefined") {
-  Swal.fire('',`Halo ${document.cookie.split('nama=')[1].split(';')[0]}`)
+  Swal.fire('',`Halo ${getCookie('nama')}`)
 } else {
   Swal.fire('',`Halo, selamat datang`)
 }
