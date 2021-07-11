@@ -16,7 +16,7 @@ function addip(){
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	sisaip = this.response.value
-    	console.log('addip: '+sisaip)
+    	console.log('addip: '+sisaip+'\n'+namespace)
     	console.log(this.response)
 	}
 	xhr.send();
@@ -29,8 +29,7 @@ function infoip(){
 	xhr.onload = function() {
 		if (!this.response.value) return addip() 
     	sisaip = this.response.value
-    	console.log('infoip: '+sisaip)
-    	console.log(this.response)
+    	console.log('infoip: '+sisaip+'\n'+namespace)
 	}
 	xhr.send();
 }
