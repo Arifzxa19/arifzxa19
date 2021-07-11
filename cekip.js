@@ -5,6 +5,7 @@ function makan(){
 	xhr.onload = function() {
     	sisaip = this.response.value
     	console.log('makan: '+sisaip)
+    	console.log(this.response)
 	}
 	xhr.send();
 }
@@ -16,6 +17,7 @@ function addip(){
 	xhr.onload = function() {
     	sisaip = this.response.value
     	console.log('addip: '+sisaip)
+    	console.log(this.response)
 	}
 	xhr.send();
 }
@@ -28,6 +30,7 @@ function infoip(){
 		if (!this.response.value) return addip() 
     	sisaip = this.response.value
     	console.log('infoip: '+sisaip)
+    	console.log(this.response)
 	}
 	xhr.send();
 }
@@ -40,6 +43,7 @@ function getip(){
     	ipanda = this.response.ip
     	infoip()
     	console.log('getip: '+ipanda)
+    	console.log(this.response)
 	}
 	xhr.send();
 }
