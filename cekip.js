@@ -4,6 +4,7 @@ function makan(){
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	sisaip = this.response.value
+    	console.log('makan: '+sisaip)
 	}
 	xhr.send();
 }
@@ -14,6 +15,7 @@ function addip(){
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	sisaip = this.response.value
+    	console.log('addip: '+sisaip)
 	}
 	xhr.send();
 }
@@ -25,6 +27,7 @@ function infoip(){
 	xhr.onload = function() {
 		if (!this.response.value) return addip() 
     	sisaip = this.response.value
+    	console.log('infoip: '+sisaip)
 	}
 	xhr.send();
 }
@@ -36,6 +39,7 @@ function getip(){
 	xhr.onload = function() {
     	ipanda = this.response.ip
     	infoip()
+    	console.log('getip: '+ipanda)
 	}
 	xhr.send();
 }
