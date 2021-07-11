@@ -18,7 +18,7 @@ function addip(){
 	xhr.send();
 }
 
-function countip(){ 
+function infoip(){ 
     var xhr = new XMLHttpRequest();
 	xhr.open("GET", `https://api.countapi.xyz/info/ip-${location.host}/${ipanda}`);
 	xhr.responseType = "json";
@@ -35,7 +35,7 @@ function getip(){
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	ipanda = this.response.ip
-    	countip()
+    	infoip()
 	}
 	xhr.send();
 }
