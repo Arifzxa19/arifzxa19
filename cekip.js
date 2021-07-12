@@ -15,7 +15,7 @@ function addip(){
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	sisaip = this.response.value
-    	console.log('addip\nsisa: '+sisaip+'\n'+this.response.namespace)
+    	console.log('addip\ndiisi: '+sisaip+'\n'+this.response.namespace)
     	console.log(this.response)
 	}
 	xhr.send();
