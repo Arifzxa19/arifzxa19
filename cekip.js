@@ -5,7 +5,8 @@ function makan(){
 	xhr.onload = function() {
     	sisaip = this.response.value
     	console.log('makan ip, tersisa: '+sisaip)
-    	try {fungsiip()} catch {}
+    	try {fungsiip()}
+		catch(err) {}
 	}
 	xhr.send();
 }
@@ -18,7 +19,8 @@ function addip(){
     	sisaip = this.response.value
     	console.log('addip\ndiisi: '+sisaip+'\n'+this.response.namespace)
     	console.log(this.response)
-    	try {fungsiip()} catch {}
+    	try {fungsiip()}
+		catch(err) {}
 	}
 	xhr.send();
 }
@@ -31,7 +33,8 @@ function infoip(ipkamu){
 		if (!this.response.value) return addip() 
     	sisaip = this.response.value
     	console.log('infoip\nsisa: '+sisaip+'\n'+this.response.namespace)
-    	try {fungsiip()} catch {}
+    	try {fungsiip()}
+		catch(err) {}
 	}
 	xhr.send();
 }
