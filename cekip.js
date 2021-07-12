@@ -4,7 +4,7 @@ function makan(){
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	sisaip = this.response.value
-    	console.log('makan: '+sisaip)
+    	console.log('makan: '+sisaip+'\n'+this.response.namespace)
     	console.log(this.response)
 	}
 	xhr.send();
@@ -16,20 +16,20 @@ function addip(){
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	sisaip = this.response.value
-    	console.log('addip: '+sisaip+'\n'+namespace)
+    	console.log('addip\nsisa: '+sisaip+'\n'+this.response.namespace)
     	console.log(this.response)
 	}
 	xhr.send();
 }
 
-function infoip(){ 
+function infoip(ipanda){ 
     var xhr = new XMLHttpRequest();
 	xhr.open("GET", `https://api.countapi.xyz/info/ip-${location.host}/${ipanda}`);
 	xhr.responseType = "json";
 	xhr.onload = function() {
 		if (!this.response.value) return addip() 
     	sisaip = this.response.value
-    	console.log('infoip: '+sisaip+'\n'+namespace)
+    	console.log('infoip\nsisa: '+sisaip+'\n'+this.response.namespace)
 	}
 	xhr.send();
 }
@@ -40,7 +40,7 @@ function getip(){
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	ipanda = this.response.ip
-    	infoip()
+    	infoip(ipanda)
     	console.log('getip: '+ipanda)
     	console.log(this.response)
 	}
