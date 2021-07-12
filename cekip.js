@@ -4,7 +4,7 @@ function makan(){
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	sisaip = this.response.value
-    	console.log('makan: '+sisaip+'\n'+this.response.namespace)
+    	console.log('makan ip, tersisa: '+sisaip)
     	console.log(this.response)
 	}
 	xhr.send();
