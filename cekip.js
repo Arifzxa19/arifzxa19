@@ -1,6 +1,6 @@
 function makan(){ 
     var xhr = new XMLHttpRequest();
-	xhr.open("GET", `https://api.countapi.xyz/update/ip-${location.host}/${ipanda}?amount=-1`);
+	xhr.open("GET", `https://api.countapi.xyz/update/ip-${location.host}/${ipkamu}?amount=-1`);
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	sisaip = this.response.value
@@ -11,7 +11,7 @@ function makan(){
 
 function addip(){ 
     var xhr = new XMLHttpRequest();
-	xhr.open("GET", "https://api.countapi.xyz/create?key="+ipanda+"&namespace=ip-"+location.host+"&value=20");
+	xhr.open("GET", "https://api.countapi.xyz/create?key="+ipkamu+"&namespace=ip-"+location.host+"&value=20");
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	sisaip = this.response.value
@@ -21,9 +21,9 @@ function addip(){
 	xhr.send();
 }
 
-function infoip(ipanda){ 
+function infoip(ipkamu){ 
     var xhr = new XMLHttpRequest();
-	xhr.open("GET", `https://api.countapi.xyz/info/ip-${location.host}/${ipanda}`);
+	xhr.open("GET", `https://api.countapi.xyz/info/ip-${location.host}/${ipkamu}`);
 	xhr.responseType = "json";
 	xhr.onload = function() {
 		if (!this.response.value) return addip() 
@@ -38,9 +38,9 @@ function getip(){
 	xhr.open("GET", `https://api.ipify.org/?format=json`);
 	xhr.responseType = "json";
 	xhr.onload = function() {
-    	ipanda = this.response.ip
-    	infoip(ipanda)
-    	console.log('getip: '+ipanda)
+    	ipkamu = this.response.ip
+    	infoip(ipkamu)
+    	console.log('getip: '+ipkamu)
 	}
 	xhr.send();
 }
