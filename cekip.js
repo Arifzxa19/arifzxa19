@@ -5,7 +5,6 @@ function makan(){
 	xhr.onload = function() {
     	sisaip = this.response.value
     	console.log('makan ip, tersisa: '+sisaip)
-    	console.log(this.response)
 	}
 	xhr.send();
 }
@@ -42,7 +41,6 @@ function getip(){
     	ipanda = this.response.ip
     	infoip(ipanda)
     	console.log('getip: '+ipanda)
-    	console.log(this.response)
 	}
 	xhr.send();
 }
