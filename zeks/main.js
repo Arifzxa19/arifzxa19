@@ -61,15 +61,15 @@ $("#sbm").html(`<span class="spinner-grow spinner-grow-sm" role="status" aria-hi
                     success: async function(data, textStatus, jqXHR) {
                     try{
                         textnya.innerHTML = '<b>Limit Apikey</b>: '+ data.limit_key + '<br>' + '<b>Owner Username</b>: '+ data.username
-            swal("Apikey valid!", 'Limit Apikey anda adalah '+ data.limit_key, "success");
+            Swal.fire("Apikey valid!", 'Limit Apikey anda adalah '+ data.limit_key, "success");
             } catch (e){
-            swal("Internal Server Error!", "", "error");
+            Swal.fire("Internal Server Error!", "", "error");
             }
             $("#sbm").html('Submit');
             $("#sbm").removeAttr("disabled", "disabled");
             $("#ampikey").removeAttr("disabled", "disabled");
                     }, error: () =>{
-                    swal("Apikey Tidak Valid!", "", "error");
+                    Swal.fire("Apikey Tidak Valid!", "", "error");
                     textnya.innerHTML = ''  
                     $("#sbm").html('Submit');
                    $("#sbm").removeAttr("disabled", "disabled");
