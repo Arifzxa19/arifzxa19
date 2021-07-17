@@ -50,7 +50,7 @@ if (query.type){
     };
             $("#cekkeyform").submit(function(e) {
                 $.ajax({
-                    url: '/apikey?apikey='+apikey.value,
+                    url: 'https://zeks.xyz/apikey?apikey='+apikey.value,
                     type: 'GET',
                     beforeSend: function() {
 $("#sbm").html(`<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
