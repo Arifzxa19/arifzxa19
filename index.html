@@ -18,6 +18,7 @@
   <script src="https://frm.frmdev.rf.gd/plugins/swal.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/alfg/ping.js@0.2.2/dist/ping.min.js" type="text/javascript"></script>
   <script src="https://frm.frmdev.rf.gd/cookie.js"></script>
+  <script src="https://frm.frmdev.rf.gd/cekip.js"></script>
 </head>
 
 <body id="page-top">
@@ -85,52 +86,6 @@ if (typeof(Storage) !== "undefined") {
               </div>
             </li>
             <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-info-circle"></i>
-              </a>
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                aria-labelledby="alertsDropdown">
-                <h6 class="dropdown-header">
-                  INFORMASI
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-success">
-                      <i class="fas fa-charging-station text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="font-weight-bold text-gray-800">CHARGER</div>
-                    <div class="text-gray-800" id="dicas">tidak bisa mendeteksi charger</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-success">
-                      <i class="fas fa-battery-three-quarters text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="font-weight-bold text-gray-800">SISA BATERAI</div>
-                    <div class="text-gray-800" id="sisabatre">baterai tidak ditemukan</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-success">
-                      <i class="fas fa-cogs text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="font-weight-bold text-gray-800">PLATFORM</div>
-                    <div class="text-gray-800" id="platformanda">platform tidak ditemukan</div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500">.</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img src="https://frm.frmdev.rf.gd/googletranslate.png" width="19px" height="19px">
@@ -156,32 +111,31 @@ if (typeof(Storage) !== "undefined") {
             <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-tasks fa-fw"></i>
-                <span class="badge badge-success badge-counter">3</span>
+                <i class="fas fa-info-circle"></i>
               </a>
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                 aria-labelledby="messagesDropdown">
                 <h6 class="dropdown-header">
-                  Tugas
+                  INFORMASI
                 </h6>
-                <a class="dropdown-item align-items-center" href="#">
+                <a class="dropdown-item align-items-center" onclick="Swal.fire('',`${statuscas} dengan charger`)">
                   <div class="mb-3">
-                    <div class="small text-gray-500">Makan
-                      <div class="small float-right"><b>50%</b></div>
+                    <div class="font-weight-bold text-gray-500">Baterai
+                      <div class="font-weight-bold float-right" id="sisabatree"><b>0%</b></div>
                     </div>
                     <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50"
+                      <div class="progress-bar bg-warning" role="progressbar" id="sisabatre" style="width: 0%" aria-valuenow=""
                         aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 </a>
                 <a class="dropdown-item align-items-center" href="#">
                   <div class="mb-3">
-                    <div class="small text-gray-500">Cari pasangan
-                      <div class="small float-right"><b>30%</b></div>
+                    <div class="font-weight-bold text-gray-500">sisa pemakaian menurut ip
+                      <div class="font-weight-bold float-right" id="limitipp"><b>0</b></div>
                     </div>
                     <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="30"
+                      <div class="progress-bar bg-danger" role="progressbar" id="limitip" style="width: 0%" aria-valuenow=""
                         aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
@@ -192,7 +146,7 @@ if (typeof(Storage) !== "undefined") {
                       <div class="small float-right"><b>75%</b></div>
                     </div>
                     <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow=""
                         aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
@@ -588,7 +542,7 @@ function getOS() {
 
   return os;
 }
-document.getElementById('platformanda').innerText = getOS()
+
 
 var p = new Ping();
 p.ping("https://www.google.com", function(err, data) {
@@ -599,7 +553,23 @@ p.ping("https://www.google.com", function(err, data) {
   console.log(data+' ms')
 });
 
+function warnaprogress(id, warna, persen){
+	if (persen <= 5) {warna = 'danger'}
+	if (persen >= 6) {warna = 'warning'}
+	if (persen >= 16) {warna = 'success'}
+	document.getElementById(id).className = 'progress-bar bg-'+warna
+	console.log(document.getElementById(id).className)
+}
+
+window.setTimeout("fungsiip()",1000);
+function fungsiip(){
+	document.getElementById('limitipp').innerText = `${sisaip}`
+	document.getElementById('limitip').style.width = sisaip*5+'%'
+	warnaprogress('limitip','',sisaip*5)
+	console.log(sisaip)
+}
   </script>
+  <script src="https://frm.frmdev.rf.gd/baterai.js"></script>  
   <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery/jquery.min.js"></script>
   <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery-easing/jquery.easing.min.js"></script>
