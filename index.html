@@ -215,11 +215,8 @@ if (typeof(Storage) !== "undefined") {
                 <div class="card-body">
                   <div class="row align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">Jam</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="jam">membaca jam anda ...</div>
-                      <div class="mt-2 mb-0 text-muted text-xs">
-                        <span>jam</span>
-                      </div>
+                      <div class="text-success text-xs font-weight-bold text-uppercase mb-1">WAKTU HARI INI</div>
+                      <div class="fa fa-clock small font-weight text-gray-600" id="jam">membaca jam anda ...</div>
                     </div>
                     <div class="col-auto">
                       <i class="fa fa-clock fa-2x text-success"></i>
@@ -457,7 +454,7 @@ swal.mixin({
         var waktu = new Date();
         setTimeout("waktu()", 1000);
         let strings = `${waktu.getHours()}:${waktu.getMinutes()}:${waktu.getSeconds()}`
-        document.getElementById("jam").textContent = strings
+        document.getElementById("jam").textContent = ' '+strings
     }
 
 window.setTimeout("writeiphtml()",1000);
