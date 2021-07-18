@@ -493,34 +493,6 @@ function getvisit(){
     	location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
     })
 
-navigator.getBattery().then(function(battery) {
-  function updateAllBatteryInfo(){
-    updateChargeInfo();
-    updateLevelInfo();
-  }
-  updateAllBatteryInfo();
-
-  battery.addEventListener('chargingchange', function(){
-    updateChargeInfo();
-  });
-  function updateChargeInfo(){
-    (battery.charging ? Swal.fire('', `Selamat mengisi baterai<br>yang tersisa ${battery.level * 100}%`) : "")
-	if (battery.charging) {document.getElementById('dicas').innerText = 'Tersambung'
-	}else{document.getElementById('dicas').innerText = 'Terputus'}
-    console.log('charging: '+battery.charging)
-  }
-
-  battery.addEventListener('levelchange', function(){
-    updateLevelInfo();
-  });
-  function updateLevelInfo(){
-  	document.getElementById('sisabatre').innerText = battery.level * 100 + "%"
-  	sisabatre = battery.level * 100 + "%"
-    console.log("Battery level: "
-                + battery.level * 100 + "%");
-  }
-});
-
 function getOS() {
   var userAgent = window.navigator.userAgent,
       platform = window.navigator.platform,
