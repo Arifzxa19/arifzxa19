@@ -13,7 +13,7 @@ function makan(){
 
 function addip(){ 
     var xhr = new XMLHttpRequest();
-	xhr.open("GET", "https://api.countapi.xyz/create?key="+ipkamu+"&namespace=ip-"+location.host+"&value=20");
+	xhr.open("GET", "https://api.countapi.xyz/create?key="+ipkamu+"&namespace=ip-"+location.host+"&value=10");
 	xhr.responseType = "json";
 	xhr.onload = function() {
     	sisaip = this.response.value
