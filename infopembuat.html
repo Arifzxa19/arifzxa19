@@ -30,41 +30,11 @@ if (typeof(Storage) !== "undefined") {
 }
 </script>
   <div id="wrapper">
-    <!-- Sidebar -->
-    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-        <div class="sidebar-brand-icon">
-          <img src="https://i.ibb.co/Y2j8xCM/Logo-FRM-picsay.png">
-        </div>
-        <div class="sidebar-brand-text mx-3">[ FRM ]</div>
-      </a>
-      <hr class="sidebar-divider my-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">
-          <i class="fa fa-home"></i>
-          <span>Rumah</span></a>
-      </li>
-      <hr class="sidebar-divider">
-      <div class="sidebar-heading">
-        FITUR LAINNYA
-      </div>
-      <li class="nav-item">
-        <a class="nav-link" href="https://frmdev.herokuapp.com">
-          <i class="fa fa-bars"></i>
-          <span>Fitur Lain</span>
-        </a>
-      </li>
-      <hr class="sidebar-divider">
-    </ul>
-    <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
         <!-- TopBar -->
         <nav class="navbar navbar-expand navbar-light bg-success topbar mb-4 static-top">
-          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
-          </button>
-          <div class="text-white font-weight-bold text-uppercase">UTAMA</div>
+          <div class="text-white font-weight-bold text-uppercase">INFO PEMILIK</div>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
@@ -196,14 +166,11 @@ if (typeof(Storage) !== "undefined") {
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">NAMA PEMBUAT</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">Fauzan Rifki Maulana</div>
-                      <div class="mt-2 mb-0 text-muted text-xs">
-                        <span>klik gambar pensil untuk mengubah</span>
-                      </div>
+                      <div class="text-success font-weight-bold text-uppercase mb-1">NAMA PEMBUAT</div>
+                      <div class="small font-weight-bold text-gray-600" onclick="Swal.fire('Fauzan Rifki Maulana')">Fauzan Rifki Maulana</div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-pencil-alt fa-2x text-success" onclick="inputnama()"></i>
+                      <i class="fas fa-pencil-alt fa-2x text-success"></i>
                     </div>
                   </div>
                 </div>
