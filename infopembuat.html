@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- MALING CODE HTML HARUS DIMUSNAHKAN -->
+<!-- HTML CODE THEM MUST BE DESTROYED -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="FRM">
+  <meta name="author" content="">
+  <meta content='#66bb6a' name='theme-color'/>
+  <link href="https://i.ibb.co/Y2j8xCM/Logo-FRM-picsay.png" rel="icon">
+  <title>[ FRM ]</title>
+  <link href="https://frmdeveloper.github.io/RuangAdmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://frmdeveloper.github.io/RuangAdmin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="https://frmdeveloper.github.io/RuangAdmin/css/ruang-admin.min.css" rel="stylesheet">
+  <script src="https://frm.frmdev.rf.gd/plugins/swal.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alfg/ping.js@0.2.2/dist/ping.min.js" type="text/javascript"></script>
+  <script src="https://frm.frmdev.rf.gd/cookie.js"></script>
+  <script src="https://frm.frmdev.rf.gd/cekip.js"></script>
+</head>
+
+<body id="page-top">
+<script>
+if (typeof(Storage) !== "undefined") {
+  Swal.fire('',`Halo ${getCookie('nama')}`)
+} else {
+  Swal.fire('',`Halo, selamat datang`)
+}
+</script>
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+        <div class="sidebar-brand-icon">
+          <img src="https://i.ibb.co/Y2j8xCM/Logo-FRM-picsay.png">
+        </div>
+        <div class="sidebar-brand-text mx-3">[ FRM ]</div>
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">
+          <i class="fa fa-home"></i>
+          <span>Rumah</span></a>
+      </li>
+      <hr class="sidebar-divider">
+      <div class="sidebar-heading">
+        FITUR LAINNYA
+      </div>
+      <li class="nav-item">
+        <a class="nav-link" href="https://frmdev.herokuapp.com">
+          <i class="fa fa-bars"></i>
+          <span>Fitur Lain</span>
+        </a>
+      </li>
+      <hr class="sidebar-divider">
+    </ul>
+    <!-- Sidebar -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+        <nav class="navbar navbar-expand navbar-light bg-success topbar mb-4 static-top">
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="text-white font-weight-bold text-uppercase">UTAMA</div>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+                <form class="navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-1 small" placeholder="ketik disini"
+                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #66bb6a;">
+                    <div class="input-group-append">
+                      <button class="btn btn-success" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="https://frm.frmdev.rf.gd/googletranslate.png" width="19px" height="19px">
+              </a>
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  TERJEMAHAN
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" onclick="location.href = `https://${location.host.replace(/[.]/g,'-')}.translate.goog/?_x_tr_sl=id&_x_tr_tl=en`">
+                  <div class="dropdown-list-image mr-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Google_Translate_Icon.png" style="max-width: 60px" alt="">
+                  </div>
+                  <div>
+                    <div class="text-success">ENGLISH
+                      </div>
+                    <div class="small text-gray-500">translate to english</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" onclick="location.href = `https://${location.host.replace(/[.]/g,'-')}.translate.goog/?_x_tr_sl=id&_x_tr_tl=en&_x_tr_pto=nv`">More Languages</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-info-circle"></i>
+              </a>
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  INFORMASI
+                </h6>
+                <a class="dropdown-item align-items-center" onclick="Swal.fire('',`${statuscas} dengan charger`)">
+                  <div class="mb-3">
+                    <div class="font-weight-bold text-gray-500">Baterai
+                      <div class="font-weight-bold float-right" id="sisabatree"><b>0%</b></div>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                      <div class="progress-bar bg-warning" role="progressbar" id="sisabatre" style="width: 0%" aria-valuenow=""
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </a>
+                <a class="dropdown-item align-items-center" href="#">
+                  <div class="mb-3">
+                    <div class="font-weight-bold text-gray-500">sisa pemakaian menurut ip
+                      <div class="font-weight-bold float-right" id="limitipp"><b>0</b></div>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                      <div class="progress-bar bg-danger" role="progressbar" id="limitip" style="width: 0%" aria-valuenow=""
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </a>
+                <a class="dropdown-item align-items-center" href="#">
+                  <div class="mb-3">
+                    <div class="small text-gray-500">Tidur
+                      <div class="small float-right"><b>75%</b></div>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow=""
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">View All Taks</a>
+              </div>
+            </li>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle" src="https://frmdeveloper.github.io/RuangAdmin/img/boy.png" style="max-width: 60px">
+                <span class="ml-2 d-none d-lg-inline text-white small">Anda</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- Topbar -->
+
+        <!-- Container Fluid-->
+        <div class="container-fluid" id="container-wrapper">
+
+          <div class="row mb-3">
+			<!-- Namaku --> 
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">NAMA PEMBUAT</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Fauzan Rifki Maulana</div>
+                      <div class="mt-2 mb-0 text-muted text-xs">
+                        <span>klik gambar pensil untuk mengubah</span>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-pencil-alt fa-2x text-success" onclick="inputnama()"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- waktu -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">WAKTU HARI INI</div>
+                      <script>
+                        today = new Date
+						locale = 'id'
+						hari = today.toLocaleDateString(locale, { weekday: 'long' })
+						tahun = today.getFullYear()
+						bulan = today.getMonth()+1
+						tanggal = today.getDate()
+						time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+					  </script>
+                      <div class="fa fa-clock small font-weight text-gray-600" id="jam">membaca jam anda ...</div><br>
+                      <div class="fas fa-calendar small font-weight text-gray-600"><script>document.write(` ${hari}, ${tanggal}-${bulan}-${tahun}`)</script></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-hourglass-half fa-2x text-success"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- ipmu --> 
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">IP ANDA</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="ipanda">loading ip ...</div>
+                      <div class="mt-2 mb-0 text-muted text-xs" id="ipanda">
+                        <span>ipv4</span>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-broadcast-tower fa-2x text-success"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- New User Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">DIKUNJUNGI</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="visits">menghitung ...</div>
+                      <div class="mt-2 mb-0 text-muted text-xs" id="visitskecil">
+                        <span>memuat informasi ...</span>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-users fa-2x text-success"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- sosmed-->
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header py-4 bg-success d-flex flex-row align-items-center justify-content-between">
+                  <div class="text-white font-weight-bold text-uppercase">&nbsp;SOSMED KAMI</div>
+                </div>
+                <div>
+                  <div class="customer-message align-items-center">
+                    <a class="font-weight-bold" href="whatsapp://send?phone=62895803265350">
+                      <div class="text-success message-title"><i class="fab fa-fw fa-whatsapp"></i> WhatsApp 1
+                        </div>
+                      <div class="small text-gray-500 message-time font-weight-bold">WhatsApp kami ke-1</div>
+                    </a>
+                  </div>
+                  <div class="customer-message align-items-center">
+                    <a class="font-weight-bold" href="whatsapp://send?phone=994402482908">
+                      <div class="text-success message-title"><i class="fab fa-fw fa-whatsapp"></i> WhatsApp 2
+                        </div>
+                      <div class="small text-gray-500 message-time font-weight-bold">WhatsApp kami ke-2</div>
+                    </a>
+                  </div>
+                  <div class="customer-message align-items-center">
+                    <a class="font-weight-bold" href="http://instagram.com/frm_developer">
+                      <div class="text-success message-title"><i class="fab fa-fw fa-instagram"></i> instagram
+                      </div>
+                      <div class="small text-gray-500 message-time font-weight-bold">instagram kami</div>
+                    </a>
+                  </div>
+                  <div class="customer-message align-items-center">
+                    <a class="font-weight-bold" href="http://fb.com/fauzan.rifki.m">
+                      <div class="text-success message-title"><i class="fab fa-fw fa-facebook"></i> Facebook
+                      </div>
+                      <div class="small text-gray-500 message-time font-weight-bold">facebook kami</div>
+                    </a>
+                  </div>
+                  <div class="customer-message align-items-center">
+                    <a class="font-weight-bold" href="mailto:fauzanrifkim@outlook.co.id">
+                      <div class="text-success message-title"><i class="far fa-envelope"></i> Email  
+                      </div>
+                      <div class="small text-gray-500 message-time font-weight-bold">email kami</div>
+                    </a>
+                  </div>
+                  <div class="customer-message align-items-center">
+                    <a class="font-weight-bold" href="sms:6281615901727">
+                      <div class="text-success message-title"><i class="fa fa-comments"></i> SMS  
+                      </div>
+                      <div class="small text-gray-500 message-time font-weight-bold">sms untuk kami</div>
+                    </a>
+                  </div>
+                  <div class="card-footer text-center">
+                    <a class="m-0 small text-success card-link">( >_ )<i></i></a>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+            
+          <!--Row-->
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <p>Apakah kamu ingin menyebarkan web ini ? <a
+                  class="btn btn-success btn-sm" id="sebarwa" target="_blank"><i class="fab fa-fw fa-whatsapp"></i>&nbsp;Sebarkan</a></p>
+            </div>
+          </div>
+
+          <!-- Modal Logout -->
+          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Anda yakin?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancel</button>
+                  <a href="logout" class="btn btn-success">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!---Container Fluid-->
+      </div>
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - 
+              <b><a onclick="Swal.fire('Fauzan Rifki Maulana','')">fauzan rifki maulana</a></b>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer -->
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  
+  
+  
+  <script>
+
+  function inspect() {
+     var script =  document.createElement('script')
+     script.src="//cdn.jsdelivr.net/npm/eruda"
+     document.body.appendChild(script)
+     script.onload = function () {
+         eruda.init()
+     }}
+if (location.href.includes('inspect=')) {inspect()}
+
+  function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
+  return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
+}
+
+function inputnama() {
+swal.mixin({
+  input: 'text',
+  confirmButtonText: 'Next &rarr;',
+  showCancelButton: true,
+  progressSteps: ['1']
+}).queue([
+  {
+    text: 'Silahkan masukkan nama anda'
+  }
+]).then((result) => {
+  if (result.value) {
+    setCookie('nama',result.value[0],365)
+    document.getElementById('namamu').innerText = getCookie('nama')
+    console.log(result.value[0])
+  }
+})
+}  
+
+  window.setTimeout("waktu()", 1000);
+    function waktu() {
+        var waktu = new Date();
+        setTimeout("waktu()", 1000);
+        let strings = `${waktu.getHours()}:${waktu.getMinutes()}:${waktu.getSeconds()}`
+        document.getElementById("jam").textContent = ' '+strings
+    }
+
+window.setTimeout("writeiphtml()",1000);
+function writeiphtml() {
+	setTimeout("writeiphtml()",1000);
+	document.getElementById("ipanda").innerText = ipanda
+}
+getip()
+function getip(){
+	var xhr=new XMLHttpRequest();
+	xhr.open("GET", 'https://api.ipify.org/?format=json');
+	xhr.responseType = "json";
+	xhr.onload = function() {
+	ipanda = this.response.ip
+	console.log(this.response.ip)
+	};
+	xhr.send();
+}
+   
+window.setTimeout("getvisit()",1000);
+function getvisit(){ 
+    var xhr = new XMLHttpRequest();
+	xhr.open("GET", `https://api.countapi.xyz/hit/${location.host}/visits`);
+	xhr.responseType = "json";
+	xhr.onload = function() {
+    	document.getElementById('visits').innerText = this.response.value + ' kali'
+    	document.getElementById('visitskecil').innerText = location.host+' telah dikunjungi sebanyak '+this.response.value+' kali'
+	}
+	xhr.send();
+}
+    
+    document.querySelector("#sebarwa").addEventListener("click", function() {
+    	location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
+    })
+
+function getOS() {
+  var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      os = null;
+  if (macosPlatforms.indexOf(platform) !== -1) {
+    os = 'Mac OS';
+  } else if (iosPlatforms.indexOf(platform) !== -1) {
+    os = 'iOS';
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    os = 'Windows';
+  } else if (/Android/.test(userAgent)) {
+    os = 'Android';
+  } else if (!os && /Linux/.test(platform)) {
+    os = 'Linux';
+  }
+
+  return os;
+}
+
+
+var p = new Ping();
+p.ping("https://www.google.com", function(err, data) {
+  if (err) {
+    console.log("error loading resource")
+    data = data + " " + err;
+  }
+  console.log(data+' ms')
+});
+
+function warnaprogress(id, warna, persen){
+	if (persen <= 5) {warna = 'danger'}
+	if (persen >= 6) {warna = 'warning'}
+	if (persen >= 16) {warna = 'success'}
+	document.getElementById(id).className = 'progress-bar bg-'+warna
+	console.log(document.getElementById(id).className)
+}
+
+window.setTimeout("fungsiip()",1000);
+function fungsiip(){
+	document.getElementById('limitipp').innerText = `${sisaip}`
+	document.getElementById('limitip').style.width = sisaip*5+'%'
+	warnaprogress('limitip','',sisaip*5)
+	console.log(sisaip)
+}
+  </script>
+  <script src="https://frm.frmdev.rf.gd/baterai.js"></script>  
+  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery/jquery.min.js"></script>
+  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://frmdeveloper.github.io/RuangAdmin/js/ruang-admin.min.js"></script>
+  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/chart.js/Chart.min.js"></script>
+  <script src="https://frmdeveloper.github.io/RuangAdmin/js/demo/chart-area-demo.js"></script>  
+
+</body>
+
+</html>
