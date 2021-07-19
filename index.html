@@ -209,14 +209,24 @@ if (typeof(Storage) !== "undefined") {
               </div>
             </div>
             
-            <!-- JAM -->
+            <!-- waktu -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card h-100">
                 <div class="card-body">
                   <div class="row align-items-center">
                     <div class="col mr-2">
                       <div class="text-success text-xs font-weight-bold text-uppercase mb-1">WAKTU HARI INI</div>
-                      <div class="fa fa-clock small font-weight text-gray-600" id="jam">membaca jam anda ...</div>
+                      <script>
+                        today = new Date
+						locale = 'id'
+						hari = today.toLocaleDateString(locale, { weekday: 'long' })
+						tahun = today.getFullYear()
+						bulan = today.getMonth()+1
+						tanggal = today.getDate()
+						time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+					  </script>
+                      <div class="fa fa-clock small font-weight text-gray-600" id="jam">membaca jam anda ...</div><br>
+                      <div class="fas fa-calendar small font-weight text-gray-600"><script>document.write(` ${hari}, ${tanggal}-${bulan}-${tahun}`)</script></div>
                     </div>
                     <div class="col-auto">
                       <i class="fa fa-clock fa-2x text-success"></i>
@@ -233,15 +243,7 @@ if (typeof(Storage) !== "undefined") {
                   <div class="row align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">Tanggal</div>
-                      <script>
-                        today = new Date
-						locale = 'id'
-						hari = today.toLocaleDateString(locale, { weekday: 'long' })
-						tahun = today.getFullYear()
-						bulan = today.getMonth()+1
-						tanggal = today.getDate()
-						time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-					</script>
+                      
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><script>document.write(`${hari}, ${tanggal}-${bulan}-${tahun}`)</script></div>
                       <div class="mt-2 mb-0 text-muted text-xs">
                         <span>tanggal</span>
