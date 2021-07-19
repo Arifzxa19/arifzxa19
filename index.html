@@ -215,7 +215,7 @@ if (typeof(Storage) !== "undefined") {
                 <div class="card-body">
                   <div class="row align-items-center">
                     <div class="col mr-2">
-                      <div class="text-success text-xs font-weight-bold text-uppercase mb-1">WAKTU HARI INI</div>
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">WAKTU HARI INI</div>
                       <script>
                         today = new Date
 						locale = 'id'
@@ -227,6 +227,9 @@ if (typeof(Storage) !== "undefined") {
 					  </script>
                       <div class="fa fa-clock small font-weight text-gray-600" id="jam">membaca jam anda ...</div><br>
                       <div class="fas fa-calendar small font-weight text-gray-600"><script>document.write(` ${hari}, ${tanggal}-${bulan}-${tahun}`)</script></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-hourglass-half fa-2x text-success"></i>
                     </div>
                   </div>
                 </div>
