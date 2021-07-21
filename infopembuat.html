@@ -154,47 +154,20 @@ if (typeof(Storage) !== "undefined") {
               </div>
             </div>
             
-            <!-- UMUR -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">WAKTU HARI INI</div>
-                      <script>
-                        today = new Date
-						locale = 'id'
-						hari = today.toLocaleDateString(locale, { weekday: 'long' })
-						tahun = today.getFullYear()
-						bulan = today.getMonth()+1
-						tanggal = today.getDate()
-						time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-					  </script>
-                      <div class="fa fa-clock small font-weight text-gray-600" id="jam">membaca jam anda ...</div><br>
-                      <div class="fas fa-calendar small font-weight text-gray-600"><script>document.write(` ${hari}, ${tanggal}-${bulan}-${tahun}`)</script></div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-hourglass-half fa-2x text-success"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- ipmu --> 
+            <!-- UMUR --> 
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card h-100">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">IP ANDA</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="ipanda">loading ip ...</div>
-                      <div class="mt-2 mb-0 text-muted text-xs" id="ipanda">
-                        <span>ipv4</span>
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">UMUR</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="umur">loading ip ...</div>
+                      <div class="mt-2 mb-0 text-muted text-xs" id="umur">
+                        <span>umur</span>
                       </div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-broadcast-tower fa-2x text-success"></i>
+                      <i class="fas fa-calendar fa-2x text-success"></i>
                     </div>
                   </div>
                 </div>
@@ -383,11 +356,6 @@ swal.mixin({
         document.getElementById("jam").textContent = ' '+strings
     }
 
-window.setTimeout("writeiphtml()",1000);
-function writeiphtml() {
-	setTimeout("writeiphtml()",1000);
-	document.getElementById("ipanda").innerText = ipanda
-}
 getip()
 function getip(){
 	var xhr=new XMLHttpRequest();
@@ -482,9 +450,10 @@ function getAge() {
 		if(age < 0){
 			age = 0;
 		}
-		return age
+		document.getElementById('umur').innerText = age+' tahun'
 	}
 }
+window.setTimeout("getAge()",1000);
   </script>
   <script src="https://frm.frmdev.rf.gd/baterai.js"></script>  
   <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery/jquery.min.js"></script>
