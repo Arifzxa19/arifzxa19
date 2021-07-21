@@ -41,12 +41,10 @@ function infoip(ipkamu){
 
 function getip(){ 
     var xhr = new XMLHttpRequest();
-	xhr.open("GET", `https://ip-api.com/json`);
+	xhr.open("GET", `https://api.ipify.org/?format=json`);
 	xhr.responseType = "json";
 	xhr.onload = function() {
-    	ipkamu = this.response.query
-    	ipnegara = this.response.country
-    	ipkota = this.response.city
+    	ipkamu = this.response.ip
     	infoip(ipkamu)
     	console.log('getip: '+ipkamu)
 	}
