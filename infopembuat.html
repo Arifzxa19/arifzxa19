@@ -348,14 +348,6 @@ swal.mixin({
 })
 }  
 
-  window.setTimeout("waktu()", 1000);
-    function waktu() {
-        var waktu = new Date();
-        setTimeout("waktu()", 1000);
-        let strings = `${waktu.getHours()}:${waktu.getMinutes()}:${waktu.getSeconds()}`
-        document.getElementById("jam").textContent = ' '+strings
-    }
-
 getip()
 function getip(){
 	var xhr=new XMLHttpRequest();
@@ -431,6 +423,7 @@ function fungsiip(){
 	warnaprogress('limitip','',sisaip*5)
 	console.log(sisaip)
 }
+
 function getAge() {
 	var date = '07/11/2004'
  
@@ -438,6 +431,7 @@ function getAge() {
 		alert("Please complete the required field!");
     }else{
 		var today = new Date();
+		var asia = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' })
 		var birthday = new Date(date);
 		var year = 0;
 		if (today.getMonth() < birthday.getMonth()) {
