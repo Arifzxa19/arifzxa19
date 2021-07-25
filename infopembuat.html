@@ -144,7 +144,7 @@ if (typeof(Storage) !== "undefined") {
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-success font-weight-bold text-uppercase mb-1">NAMA PEMBUAT</div>
-                      <div class="small font-weight-bold text-gray-600" onclick="Swal.fire('Fauzan Rifki Maulana')">Fauzan Rifki Maulana</div>
+                      <div class="small font-weight-bold text-gray-600" onclick="Swal.fire(this.innerText)">Fauzan Rifki Maulana</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-pencil-alt fa-2x text-success"></i>
@@ -160,11 +160,8 @@ if (typeof(Storage) !== "undefined") {
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">UMUR</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="umur">loading ip ...</div>
-                      <div class="mt-2 mb-0 text-muted text-xs" id="umur">
-                        <span>umur</span>
-                      </div>
+                      <div class="text-success font-weight-bold text-uppercase mb-1">UMUR</div>
+                      <div class="small font-weight-bold text-gray-600" onclick="Swal.fire(umur.innerText)" id="umur">...</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-calendar fa-2x text-success"></i>
