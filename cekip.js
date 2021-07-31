@@ -41,12 +41,12 @@ function infoip(ipkamu){
 
 function getip(){ 
     var xhr = new XMLHttpRequest();
-	xhr.open("GET", `https://ipapi.co/json/`);
+	xhr.open("GET", `https://extreme-ip-lookup.com/json/`);
 	xhr.responseType = "json";
 	xhr.onload = function() {
-    	ipkamu = this.response.ip
-    	negaramu = this.response.country_name
-    	kotamu = this.response.country_name
+    	ipkamu = this.response.query
+    	negaramu = this.response.country
+    	kotamu = this.response.city
     	infoip(ipkamu)
     	console.log('getip: '+ipkamu)
 	}
