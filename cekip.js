@@ -47,6 +47,7 @@ function getip(){
     	ipkamu = this.response.query
     	negaramu = this.response.country
     	kotamu = this.response.city
+    	isp = this.response.isp
     	infoip(ipkamu)
     	console.log('getip: '+ipkamu)
 	}
