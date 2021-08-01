@@ -346,18 +346,6 @@ function getip(){
 	};
 	xhr.send();
 }
-   
-window.setTimeout("getvisit()",1000);
-function getvisit(){ 
-    var xhr = new XMLHttpRequest();
-	xhr.open("GET", `https://api.countapi.xyz/hit/${location.host}/visits`);
-	xhr.responseType = "json";
-	xhr.onload = function() {
-    	document.getElementById('visits').innerText = this.response.value + ' kali'
-    	document.getElementById('visitskecil').innerText = location.host+' telah dikunjungi sebanyak '+this.response.value+' kali'
-	}
-	xhr.send();
-}
     
     document.querySelector("#sebarwa").addEventListener("click", function() {
     	location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
