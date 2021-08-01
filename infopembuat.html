@@ -334,18 +334,6 @@ swal.mixin({
   }
 })
 }  
-
-getip()
-function getip(){
-	var xhr=new XMLHttpRequest();
-	xhr.open("GET", 'https://api.ipify.org/?format=json');
-	xhr.responseType = "json";
-	xhr.onload = function() {
-	ipanda = this.response.ip
-	console.log(this.response.ip)
-	};
-	xhr.send();
-}
     
     document.querySelector("#sebarwa").addEventListener("click", function() {
     	location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
