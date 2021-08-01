@@ -20,14 +20,7 @@
   <script src="https://www.frm.rf.gd/cookie.js"></script>
 </head>
 
-<body id="page-top">
-<script>
-if (typeof(Storage) !== "undefined") {
-  Swal.fire('',`Halo ${getCookie('nama')}`)
-} else {
-  Swal.fire('',`Halo, selamat datang`)
-}
-</script>
+<body oncopy="return false" oncut="return false" style="background-color:#fafdfb" id="page-top">
   <div id="wrapper">
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
@@ -315,25 +308,6 @@ Toast.fire({
   title: teks
 })
 }
-
-function inputnama() {
-swal.mixin({
-  input: 'text',
-  confirmButtonText: 'Next &rarr;',
-  showCancelButton: true,
-  progressSteps: ['1']
-}).queue([
-  {
-    text: 'Silahkan masukkan nama anda'
-  }
-]).then((result) => {
-  if (result.value) {
-    setCookie('nama',result.value[0],365)
-    document.getElementById('namamu').innerText = getCookie('nama')
-    console.log(result.value[0])
-  }
-})
-}  
     
     document.querySelector("#sebarwa").addEventListener("click", function() {
     	location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
