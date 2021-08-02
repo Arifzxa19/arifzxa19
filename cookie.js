@@ -17,3 +17,7 @@ function getCookie(name) {
     }
     return null;
 }
+function base64tojson(base64) {
+    var decodedString = JSON.parse(atob(base64))
+	return decodedString
+}
