@@ -16,7 +16,6 @@
   <link href="https://frmdeveloper.github.io/RuangAdmin/css/ruang-admin.min.css" rel="stylesheet">
   <link href="https://www.frm.rf.gd/plugins/toogle.css" rel="stylesheet">
   <script src="https://www.frm.rf.gd/plugins/swal.js"></script>
-  <script src="https://www.frm.rf.gd/cekip.js"></script>
 </head>
 
 <body style="background-color:#fafdfb" id="page-top">
@@ -25,11 +24,7 @@
       <div id="content">
         <!-- TopBar -->
         <nav class="navbar navbar-expand navbar-light bg-success topbar mb-4 static-top">
-          <div class="text-white font-weight-bold text-uppercase">CPANNEL&nbsp;</div>
-          <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="customSwitch1">
-              <label class="custom-control-label" for="customSwitch1">.</label>
-           </div>
+          <div class="text-white font-weight-bold text">Blog</div>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
@@ -38,17 +33,17 @@
               </a>
               <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                 aria-labelledby="searchDropdown">
-                <form class="navbar-search">
+                <div class="navbar-search">
                   <div class="input-group">
                     <input type="text" id="cari" class="form-control bg-light border-1 small" placeholder="ketik disini"
                       aria-label="Search" aria-describedby="basic-addon2" style="border-color: #66bb6a;">
                     <div class="input-group-append">
-                      <button class="btn btn-success" type="button">
+                      <button class="btn btn-success" type="button" onclick="window.find(cari.value)">
                         <i class="fas fa-search fa-sm"></i>
                       </button>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </li>
             <li class="nav-item dropdown no-arrow mx-1">
@@ -78,28 +73,6 @@
                     </div>
                   </div>
                 </a>
-                <a class="dropdown-item align-items-center" href="#">
-                  <div class="mb-3">
-                    <div class="font-weight-bold text-gray-500">sisa pemakaian menurut ip
-                      <div class="font-weight-bold float-right" id="limitipp"><b>0</b></div>
-                    </div>
-                    <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-danger" role="progressbar" id="limitip" style="width: 0%" aria-valuenow=""
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </a>
-                <a class="dropdown-item align-items-center" href="#">
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Tidur
-                      <div class="small float-right"><b>75%</b></div>
-                    </div>
-                    <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow=""
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">View All Taks</a>
               </div>
             </li>
@@ -111,19 +84,6 @@
                 <span class="ml-2 d-none d-lg-inline text-white small">Anda</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
-                </a>
-                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
@@ -160,30 +120,8 @@
           <!--Row-->
           <div class="row">
             <div class="col-lg-12 text-center">
-              <p>Control pannel <br><a
+              <p><a
                   class="btn btn-success btn-sm text-white" onclick="window.close()">keluar</a></p>
-            </div>
-          </div>
-
-          <!-- Modal Logout -->
-          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Anda yakin?</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancel</button>
-                  <a href="login" class="btn btn-success">Logout</a>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -197,10 +135,6 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-
-<a href="#" class="act-btn">
-  p
-</a> 
   
   
   <script>
@@ -211,7 +145,6 @@
      script.onload = function () {
          eruda.init()
      }}
- inspect()
 
   function kyun(seconds){
   function pad(s){
@@ -293,25 +226,6 @@ function warnaprogress(id, warna, persen){
 	if (persen >= 16) {warna = 'success'}
 	document.getElementById(id).className = 'progress-bar bg-'+warna
 	console.log(document.getElementById(id).className)
-}
-window.setTimeout("fungsiip()",1000);
-function fungsiip(){
-	document.getElementById('limitipp').innerText = `${sisaip}`
-	document.getElementById('limitip').style.width = sisaip*10+'%'
-	warnaprogress('limitip','',sisaip*10)
-	console.log(sisaip)
-}
-
-window.setTimeout("getinfo()",1000);
-function getinfo(){
-    var xhr = new XMLHttpRequest();
-	xhr.open("GET", `${location.origin}/cpanel?req=cek`);
-	xhr.responseType = "json";
-	xhr.onload = function() {
-		onoffweb.checked = this.response.statusweb
-		
-}
-	xhr.send();
 }
   </script>
 
