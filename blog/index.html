@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="FRM">
+  <meta name="author" content="">
+  <meta content='#66bb6a' name='theme-color'/>
+  <link href="https://i.ibb.co/Y2j8xCM/Logo-FRM-picsay.png" rel="icon">
+  <title>[ FRM ] Blog</title>
+  <link href="https://frmdeveloper.github.io/RuangAdmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://frmdeveloper.github.io/RuangAdmin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="https://frmdeveloper.github.io/RuangAdmin/css/ruang-admin.min.css" rel="stylesheet">
+  <script src="https://www.frm.rf.gd/plugins/swal.js"></script>
+</head>
+
+<body style="background-color:#fafdfb" id="page-top">
+  <div id="wrapper">
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+        <nav class="navbar navbar-expand navbar-light bg-success topbar mb-4 static-top">
+          <div class="text-white font-weight-bold text-uppercase">Blog</div>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+                <form class="navbar-search">
+                  <div class="input-group">
+                    <input type="text" id="cari" class="form-control bg-light border-1 small" placeholder="ketik disini"
+                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #66bb6a;">
+                    <div class="input-group-append">
+                      <button class="btn btn-success" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" onclick="toast('Anda akan diarahkan ke halaman utama'); location.href = '/'" id="messagesDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-home"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-info-circle"></i>
+              </a>
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  INFORMASI
+                </h6>
+                <a class="dropdown-item align-items-center" onclick="Swal.fire('',`${statuscas} dengan charger`)">
+                  <div class="mb-3">
+                    <div class="font-weight-bold text-gray-500">Baterai
+                      <div class="font-weight-bold float-right" id="sisabatree"><b>0%</b></div>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                      <div class="progress-bar bg-warning" role="progressbar" id="sisabatre" style="width: 0%" aria-valuenow=""
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">.</a>
+              </div>
+            </li>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle" src="https://frmdeveloper.github.io/RuangAdmin/img/boy.png" style="max-width: 60px">
+                <span class="ml-2 d-none d-lg-inline text-white small">Anda</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- Topbar -->
+
+        <!-- Container Fluid-->
+        <div class="container-fluid" id="container-wrapper">
+
+          <div class="row mb-3">  
+            
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body" onclick="location.href = `/blog/buttonMessage-tidak-terlihat-di-WhatsApp`">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-success font-weight-bold text-uppercase mb-1">buttonMessage tidak terlihat di WhatsApp</div>
+                      <div class="small font-weight-bold text-gray-600">begini caranya</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+            
+          <!--Row-->
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <p>Terimakasih telah mengunjungi <br><a
+                  class="btn btn-success btn-sm text-white" onclick="Swal.fire('','Hai')">Halo</a></p>
+            </div>
+          </div>
+
+        </div>
+        <!---Container Fluid-->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  
+  
+  
+  <script>
+  function inspect() {
+     var script =  document.createElement('script')
+     script.src="//cdn.jsdelivr.net/npm/eruda"
+     document.body.appendChild(script)
+     script.onload = function () {
+         eruda.init()
+     }}
+
+  function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
+  return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
+}
+
+function input1(link, title) {
+if (!title) {title = 'Silahkan masukan teks'}
+swal.mixin({
+  input: 'text',
+  confirmButtonText: 'Next &rarr;',
+  showCancelButton: true,
+  progressSteps: ['1']
+}).queue([
+  {
+    text: title
+  }
+]).then((result) => {
+  if (result.value) {
+    location.href = `${link}${encodeURIComponent(result.value)}&ip=${ipkamu}`
+  }
+})
+}
+
+function input2(link) {
+swal.mixin({
+  input: 'text',
+  confirmButtonText: 'Next &rarr;',
+  showCancelButton: true,
+  progressSteps: ['1','2']
+}).queue([
+  {
+    text: 'Silahkan masukan teks 1'
+  },
+  {
+    text: 'Silahkan masukan teks 2'
+  }
+]).then((result) => {
+  if (result.value) {
+    location.href = `${link}&q=${encodeURIComponent(result.value[0])}&q2=${encodeURIComponent(result.value[1])}&ip=${ipkamu}`
+    console.log(result.value)
+  }
+})
+}
+function toast(teks, icon, timer) {
+if (!timer) {timer = 3000}
+Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: timer,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+Toast.fire({
+  icon: icon,
+  title: teks
+})
+}
+
+function getOS() {
+  var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      os = null;
+  if (macosPlatforms.indexOf(platform) !== -1) {
+    os = 'Mac OS';
+  } else if (iosPlatforms.indexOf(platform) !== -1) {
+    os = 'iOS';
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    os = 'Windows';
+  } else if (/Android/.test(userAgent)) {
+    os = 'Android';
+  } else if (!os && /Linux/.test(platform)) {
+    os = 'Linux';
+  }
+
+  return os;
+}
+
+function warnaprogress(id, warna, persen){
+	if (persen <= 5) {warna = 'danger'}
+	if (persen >= 6) {warna = 'warning'}
+	if (persen >= 16) {warna = 'success'}
+	document.getElementById(id).className = 'progress-bar bg-'+warna
+	console.log(document.getElementById(id).className)
+}
+
+  </script>
+   
+  <script src="https://www.frm.rf.gd/baterai.js"></script>  
+  <script src="https://www.frm.rf.gd/cookie.js"></script>
+  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery/jquery.min.js"></script>
+  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://frmdeveloper.github.io/RuangAdmin/js/ruang-admin.min.js"></script>
+  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/chart.js/Chart.min.js"></script>
+  <script src="https://frmdeveloper.github.io/RuangAdmin/js/demo/chart-area-demo.js"></script>  
+
+</body>
+
+</html>
