@@ -2226,7 +2226,7 @@ progress {
   color: #000000;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #dadcde;
+  border: 1px solid #000000;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
