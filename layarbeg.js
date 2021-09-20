@@ -44,7 +44,7 @@ window.addEventListener('offline', () => cekinternet.innerText = 'OFFLINE');
 
 navigator.getBattery().then(function(battery) {
   battery.addEventListener('levelchange', function(){
-    batree.innerText = ' '+battery.level * 100 + "%"
+    batree.innerText = ' '+(battery.level * 100).toFixed(0) + "%"
   });
 });
 
@@ -54,6 +54,6 @@ navigator.getBattery().then(function(battery) {
     updateLevelInfo();
   });
   function updateLevelInfo(){
-	batree.innerText = ' '+battery.level * 100 + "%"
+	batree.innerText = ' '+(battery.level * 100).toFixed(0) + "%"
   }
 });
