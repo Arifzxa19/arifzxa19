@@ -27,8 +27,11 @@ function getRandomColor() {
 }
 
 function changeFakeStatusbarColor() {
+	warna = getRandomColor()
     var metaThemeColor = document.querySelector("#bilahmenuatas");
-    metaThemeColor.style['background-color'] = getRandomColor()
+    metaThemeColor.style['background-color'] = warna
+    var getThemeColor = document.querySelector("meta[name=theme-color]");
+    getThemeColor.setAttribute("content", warna);
     setTimeout(function() {
         changeThemeColor();
     }, 3000);
