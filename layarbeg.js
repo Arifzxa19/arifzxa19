@@ -33,7 +33,7 @@ function changeFakeStatusbarColor() {
     var getThemeColor = document.querySelector("meta[name=theme-color]");
     getThemeColor.setAttribute("content", warna);
     setTimeout(function() {
-        changeThemeColor();
+        changeFakeStatusbarColor();
     }, 3000);
 }
 
