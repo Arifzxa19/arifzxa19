@@ -47,3 +47,13 @@ navigator.getBattery().then(function(battery) {
     batree.innerText = ' '+battery.level * 100 + "%"
   });
 });
+
+navigator.getBattery().then(function(battery) {
+  updateLevelInfo();
+  battery.addEventListener('levelchange', function(){
+    updateLevelInfo();
+  });
+  function updateLevelInfo(){
+	batree.innerText = ' '+battery.level * 100 + "%"
+  }
+});
