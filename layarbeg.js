@@ -27,6 +27,7 @@ function getRandomColor() {
 }
 
 function changeFakeStatusbarColor() {
+	if (!document.fullscreenElement) return
     var metaThemeColor = document.querySelector("#bilahmenuatas");
     metaThemeColor.style['background-color'] = getRandomColor()
     setTimeout(function() {
