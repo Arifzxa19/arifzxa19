@@ -1,3 +1,4 @@
+autochangeThemeColor = false
 async function openFullscreen() {
 	var elem = document.documentElement;
     if (elem.requestFullscreen) {
