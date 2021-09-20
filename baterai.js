@@ -36,9 +36,6 @@ navigator.getBattery().then(function(battery) {
   function updateLevelInfo(){
 	document.getElementById('sisabatre').style.width = battery.level * 100 + "%"
 	document.getElementById('sisabatree').innerText = battery.level * 100 + "%"
-	if (document.getElementById('batree')) {
-		batree.innerText = ' '+battery.level * 100 + "%"
-	}
 	warnaprogress('sisabatre','',battery.level * 100)
 	sisabatre = battery.level * 100 + "%"
 	console.log("Battery level: "
