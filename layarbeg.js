@@ -26,14 +26,14 @@ function getRandomColor() {
     return "#" + (((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1));
 }
 
-function changeFakeStatusbarColor() {
+function changeThemeColor() {
 	warna = getRandomColor()
     var metaThemeColor = document.querySelector("#bilahmenuatas");
     metaThemeColor.style['background-color'] = warna
     var getThemeColor = document.querySelector("meta[name=theme-color]");
     getThemeColor.setAttribute("content", warna);
     setTimeout(function() {
-        changeFakeStatusbarColor();
+        changeThemeColor();
     }, 3000);
 }
 
@@ -46,7 +46,7 @@ function getwaktu() {
 
 document.addEventListener('fullscreenchange', async (event) => {
   if (document.fullscreenElement) {
-	changeFakeStatusbarColor()
+	changeThemeColor()
     console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);
   } else {
     Swal.fire('','Hello').then((result) => {
