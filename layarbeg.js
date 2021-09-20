@@ -28,6 +28,7 @@ function getRandomColor() {
 
 function changeThemeColor() {
 	warna = getRandomColor()
+	autochangeThemeColor = true
     var metaThemeColor = document.querySelector("#bilahmenuatas");
     metaThemeColor.style['background-color'] = warna
     var getThemeColor = document.querySelector("meta[name=theme-color]");
@@ -46,7 +47,9 @@ function getwaktu() {
 
 document.addEventListener('fullscreenchange', async (event) => {
   if (document.fullscreenElement) {
-	changeThemeColor()
+	if (!autochangeThemeColor) {
+		changeThemeColor()
+	}
     console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);
   } else {
     Swal.fire('','Hello').then((result) => {
