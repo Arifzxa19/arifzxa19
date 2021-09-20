@@ -1,17 +1,17 @@
-function openFullscreen() {
+async function openFullscreen() {
 	var elem = document.documentElement;
     if (elem.requestFullscreen) {
-    	elem.requestFullscreen();
+    	return await elem.requestFullscreen();
     } else if (elem.mozRequestFullScreen) {
     	/* Firefox */
-        elem.mozRequestFullScreen();
+        return await elem.mozRequestFullScreen();
     } else if (elem.webkitRequestFullscreen) {
         /* Chrome, Safari & Opera */
-    	elem.webkitRequestFullscreen();
+    	return await elem.webkitRequestFullscreen();
     } else if (elem.msRequestFullscreen) {
         /* IE/Edge */
         elem = window.top.document.body; //To break out of frame in IE
-        elem.msRequestFullscreen();
+        return await elem.msRequestFullscreen();
     }
 }
 
@@ -26,7 +26,7 @@ function getRandomColor() {
     return "#" + (((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1));
 }
 
-function changeThemeColor() {
+function changeFakeStatusbarColor() {
     var metaThemeColor = document.querySelector("#bilahmenuatas");
     metaThemeColor.style['background-color'] = getRandomColor()
     setTimeout(function() {
@@ -52,11 +52,11 @@ document.addEventListener('fullscreenchange', async (event) => {
 });
 
 window.onload = async function() {
-  Swal.fire('','Hello').then((result) => {
-    openFullscreen()
+  Swal.fire('','Hello').then(async(result) => {
+    await openFullscreen()
+    changeFakeStatusbarColor()
   })
   getwaktu()
-  changeThemeColor();
 }
 
 window.addEventListener('online', () => cekinternet.innerText = 'ONLINE');
