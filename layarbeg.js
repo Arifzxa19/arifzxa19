@@ -15,6 +15,25 @@ function openFullscreen() {
     }
 }
 
+function getRandomRGBValue() {
+    return Math.min(Math.floor(Math.random() * 255 + 1), 255);
+}
+
+function getRandomColor() {
+    var r = getRandomRGBValue(),
+        g = getRandomRGBValue(),
+        b = getRandomRGBValue();
+    return "#" + (((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1));
+}
+
+function changeThemeColor() {
+    var metaThemeColor = document.querySelector("#bilahmenuatas");
+    metaThemeColor.style['background-color'] = getRandomColor()
+    setTimeout(function() {
+        changeThemeColor();
+    }, 3000);
+}
+
 function getwaktu() {
 	var waktu = new Date();
     setTimeout("getwaktu()", 1000);
@@ -37,6 +56,7 @@ window.onload = async function() {
     openFullscreen()
   })
   getwaktu()
+  changeThemeColor();
 }
 
 window.addEventListener('online', () => cekinternet.innerText = 'ONLINE');
