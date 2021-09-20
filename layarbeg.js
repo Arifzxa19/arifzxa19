@@ -43,6 +43,7 @@ function getwaktu() {
 
 document.addEventListener('fullscreenchange', async (event) => {
   if (document.fullscreenElement) {
+	changeFakeStatusbarColor()
     console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);
   } else {
     Swal.fire('','Hello').then((result) => {
@@ -52,9 +53,8 @@ document.addEventListener('fullscreenchange', async (event) => {
 });
 
 window.onload = async function() {
-  Swal.fire('','Hello').then(async(result) => {
-    await openFullscreen()
-    changeFakeStatusbarColor()
+  Swal.fire('','Hello').then((result) => {
+    openFullscreen()
   })
   getwaktu()
 }
