@@ -41,7 +41,7 @@ function getwaktu() {
 	var waktu = new Date();
     setTimeout("getwaktu()", 1000);
     let strings = `${waktu.getHours()}:${waktu.getMinutes()}:${waktu.getSeconds()}`
-    document.getElementById("jamatas").innerText = '  '+strings
+    document.getElementById("jamatas").innerText = '> '+strings
   }
 
 document.addEventListener('fullscreenchange', async (event) => {
