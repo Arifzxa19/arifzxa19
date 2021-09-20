@@ -19,16 +19,18 @@ document.addEventListener('fullscreenchange', async (event) => {
   if (document.fullscreenElement) {
     console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);
   } else {
-    Swal.fire('Hello').then((result) => {
+    Swal.fire('','Hello').then((result) => {
     	openFullscreen()
     })
   }
 });
+
 window.onload = function() {
-Swal.fire('Hello').then((result) => {
+Swal.fire('','Hello').then((result) => {
     	openFullscreen()
     })
 }
+
 window.setTimeout("fungsiip()",1000);
 function fungsiip(){
 	document.getElementById('limitipp').innerText = `${sisaip}`
