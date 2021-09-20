@@ -15,6 +15,13 @@ function openFullscreen() {
     }
 }
 
+function getwaktu() {
+	var waktu = new Date();
+    setTimeout("getwaktu()", 1000);
+    let strings = `${waktu.getHours()}:${waktu.getMinutes()}:${waktu.getSeconds()}`
+    document.getElementById("jamatas").innerText = strings
+  }
+
 document.addEventListener('fullscreenchange', async (event) => {
   if (document.fullscreenElement) {
     console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);
@@ -25,16 +32,18 @@ document.addEventListener('fullscreenchange', async (event) => {
   }
 });
 
-window.onload = function() {
-Swal.fire('','Hello').then((result) => {
-    	openFullscreen()
-    })
+window.onload = async function() {
+  Swal.fire('','Hello').then((result) => {
+    openFullscreen()
+  })
+  getwaktu()
 }
 
-window.setTimeout("fungsiip()",1000);
-function fungsiip(){
-	document.getElementById('limitipp').innerText = `${sisaip}`
-	document.getElementById('limitip').style.width = sisaip*10+'%'
-	warnaprogress('limitip','',sisaip*10)
-	console.log(sisaip)
-}
+window.addEventListener('online', () => cekinternet.innerText = 'ONLINE');
+window.addEventListener('offline', () => cekinternet.innerText = 'OFFLINE');
+
+navigator.getBattery().then(function(battery) {
+  battery.addEventListener('levelchange', function(){
+    batree.innerText = ' '+battery.level * 100 + "%"
+  });
+});
