@@ -34,11 +34,11 @@ navigator.getBattery().then(function(battery) {
     updateLevelInfo();
   });
   function updateLevelInfo(){
-	document.getElementById('sisabatre').style.width = battery.level * 100 + "%"
-	document.getElementById('sisabatree').innerText = battery.level * 100 + "%"
-	warnaprogress('sisabatre','',battery.level * 100)
-	sisabatre = battery.level * 100 + "%"
+	document.getElementById('sisabatre').style.width = (battery.level * 100).toFixed(0) + "%"
+	document.getElementById('sisabatree').innerText = (battery.level * 100).toFixed(0) + "%"
+	warnaprogress('sisabatre','', (battery.level * 100).toFixed(0))
+	sisabatre = (battery.level * 100).toFixed(0) + "%"
 	console.log("Battery level: "
-                + battery.level * 100 + "%");
+                + (battery.level * 100).toFixed(0) + "%");
   }
 });
