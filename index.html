@@ -26,7 +26,7 @@
 <body oncopy="return false" oncut="return false" style="background-color:#fafdfb" id="page-top">
   <script>
     if (typeof(Storage) !== "undefined") {
-      Swal.fire('', `Halo ${getCookie('nama')}`)
+      Swal.fire('', `Halo ${getCookie('nama')?getCookie('nama'):'Gaes'}`)
     } else {
       Swal.fire('', `Halo, selamat datang`)
     }
@@ -174,7 +174,7 @@
                       <div class="text-xs font-weight-bold text-uppercase mb-1">NAMA ANDA</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800" id="namamu">
                         <script>
-                          document.write(getCookie('nama'))
+                          document.write(`${getCookie('nama')?getCookie('nama'):'Gaes'}`)
                         </script>
                       </div>
                       <div class="mt-2 mb-0 text-muted text-xs">
@@ -386,10 +386,6 @@
         }
         xhr.send();
       }
-
-      document.querySelector("#sebarwa").addEventListener("click", function() {
-        location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
-      })
 
       function getOS() {
         var userAgent = window.navigator.userAgent,
