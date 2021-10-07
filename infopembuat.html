@@ -413,19 +413,19 @@ function warnaprogress(id, warna, persen){
 }
 
 function getAge() {
-	var date = '11/7/2004'
+	date = '11/7/2004'
  
 	if(date === ""){
 		alert("Please complete the required field!");
     }else{
-		var asia = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' })
-		var today = new Date(asia);
-		var birthday = new Date(date);
-		var year = 0;
+		asia = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' })
+		today = new Date(asia);
+		birthday = new Date(date);
+		year = 0;
 		if (today.getMonth() < birthday.getMonth()) {
 			year = 1;
 		} else if ((today.getMonth() == birthday.getMonth()) && today.getDate() < birthday.getDate()) {
-			year = 1;
+			year = 0;
 		}
 		var age = today.getFullYear() - birthday.getFullYear() - year;
  
