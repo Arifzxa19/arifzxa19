@@ -17,6 +17,9 @@ function getCookie(name) {
     }
     return null;
 }
+function deleteCookie(name) {
+	document.cookie = name + "=" + ""  + -1 + "; path=/";
+}
 function base64tojson(base64) {
     var decodedString = JSON.parse(atob(base64))
 	return decodedString
