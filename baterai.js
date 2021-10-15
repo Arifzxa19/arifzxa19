@@ -17,7 +17,7 @@ navigator.getBattery().then(function(battery) {
     updateChargeInfo();
   });
   function updateChargeInfo(){
-    (battery.charging ? Swal.fire('', `Selamat mengisi baterai<br>yang tersisa ${battery.level * 100}%`) : "")
+    /*(battery.charging ? Swal.fire('', `Selamat mengisi baterai<br>yang tersisa ${battery.level * 100}%`) : "")*/
 	if (battery.charging) {
 	charging = true
 	statuscas = 'tersambung'
