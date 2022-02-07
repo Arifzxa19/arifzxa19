@@ -1,259 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="FRM">
-  <meta name="author" content="">
-  <meta content='#66bb6a' name='theme-color'/>
-  <link href="https://i.ibb.co/Y2j8xCM/Logo-FRM-picsay.png" rel="icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>[ FRM ] Cara mengatasi pesan tombol bot whatsapp tidak terlihat di whatsapp mod</title>
-  <link href="https://www.frm.rf.gd/fab.css" rel="stylesheet" type="text/css">
-  <link href="https://frmdeveloper.github.io/RuangAdmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://frmdeveloper.github.io/RuangAdmin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="https://frmdeveloper.github.io/RuangAdmin/css/ruang-admin.min.css" rel="stylesheet">
-  <link href="https://www.frm.rf.gd/plugins/toogle.css" rel="stylesheet">
-  <script src="https://www.frm.rf.gd/plugins/swal.js"></script>
+  <meta name="generator" content="FRM" />
+  <meta property="og:title" content="Cara Membongkar Dan Memasang Transmisi" />
+  <meta property="og:locale" content="id_ID" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Cara Membongkar Dan Memasang Transmisi" />
+  <link rel="stylesheet" href="https://www.frm.rf.gd/hadeh/style.css">
+  <link href="http://1.bp.blogspot.com/-dXtQgZF1_OI/Vh3Y7OESelI/AAAAAAAAAJg/NPR2E7K9jAw/s1600/download.jpg" rel="icon">
 </head>
 
-<body oncopy="return false" oncut="return false" style="background-color:#fafdfb" id="page-top">
-  <div id="wrapper">
-    <div id="content-wrapper" class="d-flex flex-column">
-      <div id="content">
-        <!-- TopBar -->
-        <nav class="navbar navbar-expand navbar-light bg-success topbar mb-4 static-top">
-          <div class="text-white font-weight-bold text">BLOG</div>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                aria-labelledby="searchDropdown">
-                <div class="navbar-search">
-                  <div class="input-group">
-                    <input type="text" id="cari" class="form-control bg-light border-1 small" placeholder="ketik disini"
-                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #66bb6a;">
-                    <div class="input-group-append">
-                      <button class="btn btn-success" type="button" onclick="window.find(cari.value)">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" onclick="toast('Anda akan diarahkan ke halaman utama'); location.href = '/blog'" id="messagesDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-home"></i>
-              </a>
-            </li>
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-info-circle"></i>
-              </a>
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                aria-labelledby="messagesDropdown">
-                <h6 class="dropdown-header">
-                  INFORMASI
-                </h6>
-                <a class="dropdown-item align-items-center" onclick="Swal.fire('',`${statuscas} dengan charger`)">
-                  <div class="mb-3">
-                    <div class="font-weight-bold text-gray-500">Baterai
-                      <div class="font-weight-bold float-right" id="sisabatree"><b>0%</b></div>
-                    </div>
-                    <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-warning" role="progressbar" id="sisabatre" style="width: 0%" aria-valuenow=""
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">View All Taks</a>
-              </div>
-            </li>
-            <div class="topbar-divider d-none d-sm-block"></div>
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <img class="img-profile rounded-circle" src="https://frmdeveloper.github.io/RuangAdmin/img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">Anda</span>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
-                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Logout
-                </a>
-              </div>
-            </li>
-          </ul>
-        </nav>
-        <!-- Topbar -->
-        <!-- Container Fluid -->
-        <div class="container-fluid" id="container-wrapper">
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Post</h1>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a onclick="Swal.fire('','Rabu, 18 Agustus 2021')">Rabu, 18 Agustus 2021</a></li>
-            </ol>
-          </div>
-
-          <div class="row mb-3">    
-            <div class="col-lg-12">
-             <div class="card h-100">
-              <div class="card-header py-3">
-               <div class="text-success font-weight-bold text mb-1" onclick="Swal.fire('','Cara mengatasi pesan tombol bot whatsapp tidak terlihat di whatsapp mod')">Cara mengatasi pesan tombol bot whatsapp tidak terlihat di whatsapp mod</div>
-              </div>
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/tidakterlihat.jpg" width="180px" height="320px">
-					  <p onclick="Swal.fire('',this.innerText)">Assalamualaikum, selamat membaca semoga kali ini bermanfaat.<br>
-						Kali ini saya akan memberikan tutorial cara mengatasi buttonsMessage tidak terlihat di wa mod. Langsung kita mulai<br><br>
-						Silahkan buka WhatsApp Mod kemudian pencet GB setting (jika GBWA) ⬇⬇
-					  </p>
-					  <img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/home.jpg" width="180px" height="320px">
-					  <p onclick="Swal.fire('',this.innerText)"><br>Kemudian klik Layar Percakapan ⬇⬇</p>
-					  <img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/pengaturan.jpg" width="180px" height="320px">
-					  <p onclick="Swal.fire('',this.innerText)"><br>Kemudian klik Gambar ⬇⬇</p>
-					  <img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/layarpercakapan.jpg" width="180px" height="320px">
-					  <p onclick="Swal.fire('',this.innerText)"><br>Kemudian atur seperti gambar dibawah ⬇⬇</p>
-					  <img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/gambar.jpg" width="180px" height="320px">
-					  <p onclick="Swal.fire('',this.innerText)"><br>Sekarang lihat hasilnya ⬇⬇</p>
-					  <img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/berhasil.png" width="180px" height="320px">
-					  <p onclick="Swal.fire('',this.innerText)"><br>Sekian, semoga bermanfaat. Wassalamualaikum wr. wb.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!--Row-->
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <p><a
-                  class="btn btn-success btn-sm text-white" onclick="Swal.fire(`Hai`)">Halo</a></p>
-            </div>
-          </div>
-
-        </div>
-        <!---Container Fluid-->
-      </div>
-    </div>
+<body onmousedown="return false" onselectstart="alert('Aktivitas mencurigakan terdeteksi.\n\nCopy paste izin ke Fauzan Rifki Maulana dulu')">
+  <div class="wrapper">
+    <header>
+      <h1><a href="https://www.frm.rf.gd/infopembuat">FRM</a></h1>
+      <p></p>
+    </header>
+    <section>
+      <h2>Cara mengatasi pesan tombol bot whatsapp tidak terlihat di whatsapp mod</h2>
+      <hr />
+      <p><img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/tidakterlihat.jpg" width="180px" height="320px"></p>
+      <h3>Assalamualaikum, selamat membaca semoga kali ini bermanfaat.</h3>
+      <p>Kali ini saya akan memberikan tutorial cara mengatasi buttonsMessage tidak terlihat di wa mod. Langsung kita mulai</p>
+      <ul>
+        <li>Silahkan buka WhatsApp Mod kemudian pencet GB setting (jika anda pengguna GBWA) ⬇⬇</li>
+        <img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/home.jpg" width="180px" height="320px">
+        <li>Kemudian klik Layar Percakapan ⬇⬇</li>
+        <img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/pengaturan.jpg" width="180px" height="320px">
+        <li><br>Kemudian klik Gambar ⬇⬇</li>
+        <img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/layarpercakapan.jpg" width="180px" height="320px">
+        <li><br>Kemudian atur seperti gambar dibawah ⬇⬇
+        <img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/gambar.jpg" width="180px" height="320px">
+        <li><br>Sekarang lihat hasilnya ⬇⬇</li>
+        <img src="https://www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp/berhasil.png" width="180px" height="320px">
+      </ul>
+      <h3 id="salam-penutup">Kalimat penutup</h3>
+      <p>Sekian dari saya apabila ada kesalahan silahkan hubungi saya melalui <a href="https://wa.me/62895803265350">WhatsApp</a><br>Salam dari Fauzan</p>
+    </section>
+    <footer>
+      <p><small id="ngisor">Hosted on GitHub Pages &mdash; by <a href="https://www.frm.rf.gd/infopembuat">Fauzan Rifki Maulana</a><br>Rabu, 18 Agustus 2021 GMT+7</small></p>
+    </footer>
   </div>
-
-  <!-- Scroll to top -->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-  
-  
   <script>
-  function inspect() {
-     var script =  document.createElement('script')
-     script.src="//cdn.jsdelivr.net/npm/eruda"
-     document.body.appendChild(script)
-     script.onload = function () {
-         eruda.init()
-     }}
-
-  function kyun(seconds){
-  function pad(s){
-    return (s < 10 ? '0' : '') + s;
-  }
-  var hours = Math.floor(seconds / (60*60));
-  var minutes = Math.floor(seconds % (60*60) / 60);
-  var seconds = Math.floor(seconds % 60);
-
-  //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
-  return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
-}
-
-function toast(teks, icon, timer) {
-if (!timer) {timer = 3000}
-Toast = Swal.mixin({
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: timer,
-  timerProgressBar: true,
-  didOpen: (toast) => {
-    toast.addEventListener('mouseenter', Swal.stopTimer)
-    toast.addEventListener('mouseleave', Swal.resumeTimer)
-  }
-})
-Toast.fire({
-  icon: icon,
-  title: teks
-})
-}
-
-function fetchJson(url, id){ 
-	if (url.startsWith('/')) {url = `${location.origin}${url}`}
-    var xhr = new XMLHttpRequest();
-	xhr.open("GET", url);
-	xhr.responseType = "json";
-	xhr.onload = function() {
-		if (!id) return Swal.fire(JSON.stringify(this.response))
-    	document.getElementById(id).innerText = JSON.stringify(this.response)
+	function pengunjung({value}) { 
+		ngisor.innerHTML += '<br>Dikunjungi '+value+' kali'
 	}
-	xhr.send();
-}
-
-function getParameterByName(name, url = window.location.href) {
-    name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
-
-function getOS() {
-  var userAgent = window.navigator.userAgent,
-      platform = window.navigator.platform,
-      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
-      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-      os = null;
-  if (macosPlatforms.indexOf(platform) !== -1) {
-    os = 'Mac OS';
-  } else if (iosPlatforms.indexOf(platform) !== -1) {
-    os = 'iOS';
-  } else if (windowsPlatforms.indexOf(platform) !== -1) {
-    os = 'Windows';
-  } else if (/Android/.test(userAgent)) {
-    os = 'Android';
-  } else if (!os && /Linux/.test(platform)) {
-    os = 'Linux';
-  }
-
-  return os;
-}
-
-function warnaprogress(id, warna, persen){
-	if (persen <= 5) {warna = 'danger'}
-	if (persen >= 6) {warna = 'warning'}
-	if (persen >= 16) {warna = 'success'}
-	document.getElementById(id).className = 'progress-bar bg-'+warna
-	console.log(document.getElementById(id).className)
-}
   </script>
-
-  <script src="https://www.frm.rf.gd/baterai.js"></script>  
-  <script src="https://www.frm.rf.gd/cookie.js"></script>
-  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery/jquery.min.js"></script>
-  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="https://frmdeveloper.github.io/RuangAdmin/js/ruang-admin.min.js"></script>
-  <script src="https://frmdeveloper.github.io/RuangAdmin/vendor/chart.js/Chart.min.js"></script>
-  <script src="https://frmdeveloper.github.io/RuangAdmin/js/demo/chart-area-demo.js"></script>  
-
+  <script src="https://www.frm.rf.gd/hadeh/scale.fix.js"></script>
+  <script src="https://api.countapi.xyz/hit/www.frm.rf.gd/blog/buttonMessage-tidak-terlihat-di-WhatsApp?callback=pengunjung"></script>
 </body>
-
 </html>
