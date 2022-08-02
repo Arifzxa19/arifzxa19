@@ -113,6 +113,18 @@
       return hitungan
       //return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
     }
+    
+function cekUsia(ttl) {
+    let date = new Date(ttl)
+    if (date == 'Invalid Date') throw date
+    let d = new Date()
+    let [tahun, bulan, tanggal] = [d.getFullYear(), d.getMonth() + 1, d.getDate()]
+    let birth = [date.getFullYear(), date.getMonth() + 1, date.getDate()]
+    let ageD = new Date(d - date)
+    let age = ageD.getFullYear() - new Date(1970, 0, 1).getFullYear()
+    let birthday = [tahun + (+ new Date(1970, bulan - 1, tanggal) > + new Date(1970, birth[1] - 1, birth[2])), ...birth.slice(1)]
+    return age
+}
   </script>
 </head>
 
