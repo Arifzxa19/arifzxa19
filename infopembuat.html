@@ -121,6 +121,17 @@
       let ageD = new Date(d - date)
       return ageD.getFullYear() - new Date(1970, 0, 1).getFullYear()
     }
+    
+    function getip(element) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", 'https://api.ipify.org/?format=json');
+        xhr.responseType = "json";
+        xhr.onload = function() {
+          [element] = this.response.ip
+          console.log(this.response.ip)
+        };
+        xhr.send();
+    }
   </script>
 </head>
 
@@ -220,7 +231,7 @@
                     <div class="font-weight-bold text-gray-500">Alamat ip
                       <div class="font-weight-bold float-right"><b></b></div>
                     </div>
-                    <div id="ipyou" class="font-weight-bold text-warna"><%=ip%></div>
+                    <div id="ipyou" class="font-weight-bold text-warna"><script>getip('ipyou')</script></div>
                   </div>
                 </a>
               </div>
