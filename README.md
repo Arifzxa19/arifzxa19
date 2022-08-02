@@ -15,4 +15,4 @@ ___
 ### Uang digital
 - [Saweria](https://saweria.co/frmdeveloper)
 - [Dana:](https://link.dana.id/qr/3jstu95e) 081615901727
-- Rek. CIMB Niaga: 8059081615901727
+- Rek. virtual CIMB Niaga: 8059081615901727
