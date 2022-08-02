@@ -114,17 +114,13 @@
       //return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
     }
     
-function cekUsia(ttl) {
-    let date = new Date(ttl)
-    if (date == 'Invalid Date') throw date
-    let d = new Date()
-    let [tahun, bulan, tanggal] = [d.getFullYear(), d.getMonth() + 1, d.getDate()]
-    let birth = [date.getFullYear(), date.getMonth() + 1, date.getDate()]
-    let ageD = new Date(d - date)
-    let age = ageD.getFullYear() - new Date(1970, 0, 1).getFullYear()
-    let birthday = [tahun + (+ new Date(1970, bulan - 1, tanggal) > + new Date(1970, birth[1] - 1, birth[2])), ...birth.slice(1)]
-    return age
-}
+    function cekUsia(ttl) {
+      let date = new Date(ttl)
+      if (date == 'Invalid Date') throw date
+      let d = new Date()
+      let ageD = new Date(d - date)
+      return ageD.getFullYear() - new Date(1970, 0, 1).getFullYear()
+    }
   </script>
 </head>
 
@@ -287,7 +283,7 @@ function cekUsia(ttl) {
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-warna font-weight-bold text-uppercase mb-1">UMUR</div>
-                      <div class="small font-weight-bold text-gray-600" onclick="Swal.fire(umur.innerText)" id="umur">menghitung...</div>
+                      <div class="small font-weight-bold text-gray-600" onclick="Swal.fire(umur.innerText)" id="umur"><script>document.write(cekUsia('2004 11 7'))</script></div>
                     </div>
                   </div>
                 </div>
