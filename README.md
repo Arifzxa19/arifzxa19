@@ -1,11 +1,10 @@
 ### HAI 👋
-Saya Fauzan Rifki Maulana
-- [https://github.com/frmdeveloper](https://github.com/frmdeveloper)
-- [https://github.com/FRM-Developer](https://github.com/FRM-Developer)
-- [https://www.frm.rf.gd](https://www.frm.rf.gd)
-- [Instagram](https://instagram.com/frm_developer)
-- [Facebook](https://fb.com/frm-developer)
-
+Saya Fauzan Rifki Maulana<br>
+• frmdeveloper@yandex.com<br>
+• [WhatsApp](https://wa.me/6281615901727)<br>
+• [Instagram @frmdeveloper](https://instagram.com/frmdeveloper)<br>
+• [Facebook @frmdeveloper](https://fb.com/frmdeveloper)<br>
+• [Telegram @frmdeveloper](https://t.me/frmdeveloper)
 ___
 # Donate
 <p align="center" width=100%><img src="https://svgur.com/i/Vtt.svg"></p>
