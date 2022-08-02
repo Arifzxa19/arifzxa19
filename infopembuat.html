@@ -127,7 +127,7 @@
         xhr.open("GET", 'https://api.ipify.org/?format=json');
         xhr.responseType = "json";
         xhr.onload = function() {
-          [element] = this.response.ip
+          ipyou = this.response.ip
           console.log(this.response.ip)
         };
         xhr.send();
