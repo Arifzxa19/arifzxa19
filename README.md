@@ -1,6 +1,6 @@
 ### HAI 👋
 Saya Fauzan Rifki Maulana<br>
-• frmdeveloper@yandex.com<br>
+• fauzan@frmdev.ml<br>
 • [WhatsApp](https://wa.me/6281615901727)<br>
 • [Instagram @frmdeveloper](https://instagram.com/frmdeveloper)<br>
 • [Facebook @frmdeveloper](https://fb.com/frmdeveloper)<br>
