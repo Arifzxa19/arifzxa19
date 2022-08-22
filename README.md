@@ -1,5 +1,5 @@
 ### HAI 👋
-Saya Fauzan Rifki Maulana<br>
+Saya orang Tuban, Jawa timur<br>
 • fauzan@frmdev.ml<br>
 • [WhatsApp](https://wa.me/6281615901727)<br>
 • [Instagram @frmdeveloper](https://instagram.com/frmdeveloper)<br>
