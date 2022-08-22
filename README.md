@@ -6,7 +6,7 @@ Saya Fauzan Rifki Maulana<br>
 • [Facebook @frmdeveloper](https://fb.com/frmdeveloper)<br>
 • [Telegram @frmdeveloper](https://t.me/frmdeveloper)
 ___
-# Donate
+# SUMBANGAN
 
 ### Pulsa
 - axis:  083169480682
