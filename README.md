@@ -1,8 +1,9 @@
+<div align="center">
+
 [![github stats](https://github-readme-stats.vercel.app/api?username=frmdeveloper&show_icons=true&hide_border=true&hide=issues)](https://github.com/frmdeveloper)
 <br>
 <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/dino.gif" alt="Dino Game" width="270" />
 <br>
-<div align="center">
 
 <details>
  <summary>MY SOSMED</summary>
